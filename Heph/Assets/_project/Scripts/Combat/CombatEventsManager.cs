@@ -30,5 +30,12 @@ namespace Heph.Scripts.Combat
         {
             ActionTick?.Invoke();
         }
+
+        public event Action SelectionConfirmButtonEvent;
+
+        public void OnSelectionConfirmButtonPressed()
+        {
+            SelectionConfirmButtonEvent?.Invoke();
+        }
     }
 }

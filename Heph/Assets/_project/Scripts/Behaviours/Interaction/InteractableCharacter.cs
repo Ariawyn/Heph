@@ -18,6 +18,8 @@ namespace Heph.Scripts.Behaviours.Interaction
 
         public override void Interact()
         {
+            Debug.Log("Hello");
+            
             // IS THIS THE BEST WAY??????????????
             var playerGameObject = GameObject.FindWithTag("Player");
         

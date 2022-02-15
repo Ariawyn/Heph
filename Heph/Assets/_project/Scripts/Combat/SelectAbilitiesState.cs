@@ -1,4 +1,6 @@
 using System.Collections;
+using System.Collections.Generic;
+using Heph.Scripts.Combat.Card;
 using UnityEngine;
 
 namespace Heph.Scripts.Combat
@@ -11,13 +13,16 @@ namespace Heph.Scripts.Combat
         {
             Debug.Log("Select Abilities State started");
 
-            yield return new WaitForSeconds(2);
+            // DRAW CARDS
+            var cardsInHand = BattleSystem.player.DrawCards();
+            BattleSystem.combatUI.DisplayHand(cardsInHand);
 
-            BattleSystem.SetState(new ResolveAbilitiesState(BattleSystem));
+            yield return new WaitForSeconds(1);
         }
 
         public override void End()
         {
+            BattleSystem.combatUI.ClearHand();
             Debug.Log("Select Abilities State ended");
         }
     }

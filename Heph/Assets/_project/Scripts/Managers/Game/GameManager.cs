@@ -50,6 +50,7 @@ namespace Heph.Scripts.Managers.Game
 			battleControllerObject.TryGetComponent<BattleSystem>(out var battleSystem);
 			
 			if (battleSystem == null) return;
+			Debug.Log("Passing in fighterhandler data");
 			battleSystem.InitBattle(_tempPlayerData, _tempEnemyData);
 		}
 

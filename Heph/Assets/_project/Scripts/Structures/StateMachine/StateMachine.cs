@@ -12,5 +12,10 @@ namespace Heph.Scripts.Utils.StateMachine
             _state = state;
             StartCoroutine(_state.Start());
         }
+
+        public State GetState()
+        {
+            return _state;
+        }
     }
 }

@@ -487,7 +487,7 @@ GameObject:
   - component: {fileID: 1109046868}
   - component: {fileID: 1109046867}
   - component: {fileID: 1109046869}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: FighterDataInteractable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -521,20 +521,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 429be0203d7f07540ace874472a3484b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaximumHealth:
-    BaseValue: 100
-  CurrentHealth:
-    BaseValue: 10
-  PhysicalAttack:
-    BaseValue: 10
-  MagicalAttack:
-    BaseValue: 10
-  PhysicalDefense:
-    BaseValue: 10
-  MagicalDefense:
-    BaseValue: 10
-  Desire:
-    BaseValue: 4
+  maximumHealth:
+    baseValue: 5
+  currentHealth:
+    baseValue: 5
+  physicalAttack:
+    baseValue: 5
+  magicalAttack:
+    baseValue: 5
+  physicalDefense:
+    baseValue: 5
+  magicalDefense:
+    baseValue: 5
+  desire:
+    baseValue: 5
+  isBusyWithDesire: 0
+  deck:
+  - {fileID: 11400000, guid: 41c8140234cacfc4e84db22b6fb6f2a4, type: 2}
 --- !u!114 &1109046868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -615,7 +618,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2454875, y: 1}
+    m_SensorSize: {x: 2.0342019, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -631,7 +634,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1215667359}
-  m_LocalRotation: {x: 0.14253856, y: -0.000000014749011, z: 0.0000000021239903, w: 0.98978925}
+  m_LocalRotation: {x: 0.14253856, y: 0.000000014749011, z: -0.0000000021239903, w: 0.98978925}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -849,7 +852,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2454875, y: 1}
+    m_SensorSize: {x: 2.0342019, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1039,7 +1042,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2454875, y: 1}
+    m_SensorSize: {x: 2.0342019, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1653,7 +1656,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2454875, y: 1}
+    m_SensorSize: {x: 2.0342019, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1888,20 +1891,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 429be0203d7f07540ace874472a3484b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaximumHealth:
-    BaseValue: 100
-  CurrentHealth:
-    BaseValue: 10
-  PhysicalAttack:
-    BaseValue: 10
-  MagicalAttack:
-    BaseValue: 10
-  PhysicalDefense:
-    BaseValue: 10
-  MagicalDefense:
-    BaseValue: 10
-  Desire:
-    BaseValue: 5
+  maximumHealth:
+    baseValue: 100
+  currentHealth:
+    baseValue: 100
+  physicalAttack:
+    baseValue: 10
+  magicalAttack:
+    baseValue: 50
+  physicalDefense:
+    baseValue: 100
+  magicalDefense:
+    baseValue: 10
+  desire:
+    baseValue: 5
+  isBusyWithDesire: 0
+  deck:
+  - {fileID: 11400000, guid: 41c8140234cacfc4e84db22b6fb6f2a4, type: 2}
 --- !u!114 &2057006435
 MonoBehaviour:
   m_ObjectHideFlags: 0

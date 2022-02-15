@@ -1,4 +1,9 @@
+using System.Collections;
+using System.Collections.Generic;
 using Heph.Scripts.Combat;
+using Heph.Scripts.Combat.Ability;
+using Heph.Scripts.Combat.Card;
+using Heph.Scripts.Structures.AbilityQueue;
 using UnityEngine;
 
 namespace Heph.Scripts.Character
@@ -19,43 +24,65 @@ namespace Heph.Scripts.Character
         public Stat physicalDefense;
         public Stat magicalDefense;
 
-        // desire here acting somewhat like action points
+        // Desire here acting like action points per round of combat
         public Stat desire;
-
+        
+        // Is the fighter currently paying desire costs
+        public bool isBusyWithDesire = false;
+        private int _currentDesireActionIndex = 0;
+        private int _currentDesireActionRequiredAmount = 0;
+        
+        
         #endregion
 
-        
-        public Ability[] desireAbilityQueue;
-        public int currentAbilityQueueingIndex = 0;
-        public int currentTotalDesireCost;
-        
-        [SerializeField] private Ability fillerAbility;
+        private CardQueue desireCardQueue;
+        public List<BaseCard> deck;
 
-        public void SetupDesireAbilityQueue()
+        public void SetupForCombat()
         {
-            desireAbilityQueue = new Ability[desire.Value];
+            SetupDesireCardQueue();
+            CombatEventsManager.Instance.ActionTick += DesireActionTick;
+        }
+        
+
+        private void SetupDesireCardQueue()
+        {
+            desireCardQueue = new CardQueue(desire.Value);
         }
 
-        public bool QueueAbility(Ability ability)
+        public bool QueueCard(BaseCard card)
         {
-            if (currentAbilityQueueingIndex >= desire.Value) return false;
-            if (ability.type == AbilityType.None) return false;
-            if (currentTotalDesireCost + ability.desireCost > desire.Value) return false;
+            return desireCardQueue.Queue(card);
+        }
+
+        public IEnumerator ExecuteTopCard(FighterHandler target)
+        {
+            // HANDLE GETTING AND ACTIVATING TOP CARD
+            if (desireCardQueue == null) yield break;
+            if (desireCardQueue.Entries() < 1) yield break;
             
-            desireAbilityQueue[currentAbilityQueueingIndex] = ability;
-            currentAbilityQueueingIndex++;
-            if (ability.desireCost <= 1) return true;
-            
-            var fillerSpacesToAdd = ability.desireCost - 1;
-            for (var i = 0; i < fillerSpacesToAdd; i++)
+            var cardToExecute = desireCardQueue.Dequeue();
+            StartCoroutine(cardToExecute.Activate(this, target));
+
+            // HANDLE CARD ACTION COST
+            if (cardToExecute.desireCost <= 1) yield break;
+            isBusyWithDesire = true;
+            _currentDesireActionIndex++;
+            _currentDesireActionRequiredAmount = cardToExecute.desireCost;
+        }
+
+        private void DesireActionTick()
+        {
+            if (_currentDesireActionIndex + 1 >= _currentDesireActionRequiredAmount)
             {
-                desireAbilityQueue[currentAbilityQueueingIndex + i] = fillerAbility;
-                currentAbilityQueueingIndex++;  // UGH MAYBE WITH A DATA STRUCTURE FOR DESIRE QUEUE WE WONT HAVE TO DO THIS??? TODO: MAYBE??
-                                                // KINDA MAYBE HAS TO BE ITS OWN DATA STRUCTURE SINCE WE DONT ASSOCIATE ONE ABILITY WITH MANY INDEXES CURRENTLY...
-                                                // SO LIKE REMOVING AN ABILITY FROM THE QUEUE WOULD NEED TO CHECK DESIRE COST AND REMOVE THE TWO THINGS AFTER
-                                                // THEN SORT??? IN DATA STRUCT MAYBE EASIER
+                isBusyWithDesire = false;
+                _currentDesireActionIndex = 0;
+                _currentDesireActionRequiredAmount = 0;
             }
-            return true;
+            else
+            {
+                _currentDesireActionIndex++;
+            }
         }
 
         public void HandleDamage(int damageAmount, bool physical)
@@ -69,6 +96,22 @@ namespace Heph.Scripts.Character
             {
                 HandleDefeat();
             }
+        }
+
+        public List<BaseCard> DrawCards()
+        {
+            if (deck.Count <= 0) return null;
+            Debug.Log("Deck wasnt null");
+            
+            List<BaseCard> drawnCards = new List<BaseCard>();
+            
+            for (var i = 0; i < desire.Value; i++)
+            {
+                // TODO: Make this actually random
+                drawnCards.Add(deck[0]);
+            }
+
+            return drawnCards;
         }
 
         private void HandleDefeat()

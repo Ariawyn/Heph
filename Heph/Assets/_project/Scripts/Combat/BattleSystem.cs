@@ -1,13 +1,16 @@
+using System;
 using Heph.Scripts.Character;
+using Heph.Scripts.Combat.Card;
 using Heph.Scripts.Utils.StateMachine;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Heph.Scripts.Combat
 {
     public class BattleSystem : StateMachine
     {
-        private FighterHandler _player;
-        private FighterHandler _enemy;
+        public FighterHandler player;
+        public FighterHandler enemy;
 
         public int currentCombatRound = 0;
         public int currentRoundAction = 0;
@@ -16,22 +19,40 @@ namespace Heph.Scripts.Combat
 
         public int maxRounds = 15;
 
+        public CombatUIHandler combatUI;
+        
+        // TEMP STUFF;
+        public BaseCard testCard;
+
         public void InitBattle(FighterHandler playerHandler, FighterHandler enemyHandler)
         {
-            _player = playerHandler;
-            _enemy = enemyHandler;
-
+            player = playerHandler;
+            enemy = enemyHandler;
+            player.SetupForCombat();
+            enemy.SetupForCombat();
+            player.deck.Add(testCard);
+            enemy.deck.Add(testCard);
+            
             currentCombatRound++;
             CombatEventsManager.Instance.OnRoundTick();
 
-            Debug.Log("Player magical defense is (for test): " + _player.magicalDefense.Value);
-            Debug.Log("Enemy magical defense is (for test): " + _enemy.magicalDefense.Value);
+            CombatEventsManager.Instance.SelectionConfirmButtonEvent += MoveToResolveState;
+            
+            Debug.Log("Player magical defense is (for test): " + player.magicalDefense.Value);
+            Debug.Log("Enemy magical defense is (for test): " + enemy.magicalDefense.Value);
 
-            highestFighterDesire = (_player.desire.Value >= _enemy.desire.Value) ? _player.desire.Value : _enemy.desire.Value;
+            highestFighterDesire = (player.desire.Value >= enemy.desire.Value) ? player.desire.Value : enemy.desire.Value;
 
             SetState(new BeginCombatState(this));
         }
 
+        private void MoveToResolveState()
+        {
+            if (GetState().GetType() != typeof(SelectAbilitiesState)) return;
+            Debug.Log("Move to resolve state called");
+            SetState(new ResolveAbilitiesState(this));
+        }
+        
         public void MoveToNextRound()
         {
             if(currentCombatRound < maxRounds)
@@ -40,7 +61,7 @@ namespace Heph.Scripts.Combat
                 CombatEventsManager.Instance.OnRoundTick();
                 
                 currentRoundAction = 0;
-                SetState(new SelectAbilitiesState(this));
+                SetState(new SelectAbilitiesState(this)); 
             }
             else
             {
@@ -52,8 +73,8 @@ namespace Heph.Scripts.Combat
 
         private void ResetAfterBattle()
         {
-            _player = null;
-            _enemy = null;
+            player = null;
+            enemy = null;
             currentCombatRound = 0;
             currentRoundAction = 0;
             highestFighterDesire = 0;

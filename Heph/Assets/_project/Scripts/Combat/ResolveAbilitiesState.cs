@@ -1,4 +1,6 @@
 using System.Collections;
+using Heph.Scripts.Character;
+using Heph.Scripts.Combat.Card;
 using UnityEngine;
 
 namespace Heph.Scripts.Combat
@@ -31,16 +33,25 @@ namespace Heph.Scripts.Combat
                 {
                     BattleSystem.currentRoundAction++;
                     CombatEventsManager.Instance.OnActionTick();
-                    
-                    // TODO: Get current abilities on the round action from battle system.
-                    
-                    
+
                     Debug.Log("Executing round action: " + BattleSystem.currentRoundAction);
 
-                    // TODO: Wait for 1 second, or wait for action to resolve, whichever is longest
-                    // Really the longest something could be is a dialogue ability perhaps, in which case we have to wait
-                    // for our story manager for the inkle integration when i make that
+                    // TODO: Also this doesnt take into account abilities canceling each other, like if one ability is a punch during dialogue??
+                    // TODO: Maybe we have to check on that before launching the coroutines..., make a check function
+                    // TODO: Check for interrupt cancelation of top cards abilities
+                    Coroutine playerRoutine = null;
+                    Coroutine enemyRoutine = null;
+                    if (!BattleSystem.player.isBusyWithDesire)
+                    {
+                        playerRoutine = BattleSystem.StartCoroutine(BattleSystem.player.ExecuteTopCard(BattleSystem.enemy));
+                    }
+                    if (!BattleSystem.enemy.isBusyWithDesire)
+                    {
+                        enemyRoutine = BattleSystem.StartCoroutine(BattleSystem.enemy.ExecuteTopCard(BattleSystem.player));
+                    }
 
+                    if (playerRoutine != null) yield return playerRoutine;
+                    if (enemyRoutine != null) yield return enemyRoutine;
                     yield return new WaitForSeconds(1);
                 }
                 else

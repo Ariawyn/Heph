@@ -39,7 +39,13 @@ namespace Heph.Scripts.Structures.AbilityQueue
             
             var cardToDequeue = _cards[0];
             _cards.Remove(cardToDequeue);
+            _currentDesireCost -= cardToDequeue.desireCost;
             return cardToDequeue;
+        }
+
+        public bool RemoveFromQueue(BaseCard card)
+        {
+            return _cards.Remove(card);
         }
     }
 }

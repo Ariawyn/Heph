@@ -4,11 +4,11 @@ namespace Heph.Scripts.Combat
 {
     public class BattleState : State
     {
-        protected readonly BattleSystem BattleSystem;
+        protected BattleSystem BattleSystemRef;
 
         protected BattleState(BattleSystem battleSystem)
         {
-            BattleSystem = battleSystem;
+            BattleSystemRef = battleSystem;
         }
     }
 }

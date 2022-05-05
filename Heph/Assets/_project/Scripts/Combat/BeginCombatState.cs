@@ -11,9 +11,12 @@ namespace Heph.Scripts.Combat
         {
             Debug.Log("Begin Combat State started");
 
+            if (BattleSystemRef.player == null) { Debug.Log("In begin combat state, player is null in battlesystem for some reason."); }
+            if (BattleSystemRef.enemy == null) { Debug.Log("In begin combat state, enemy is null in battlesystem for some reason."); }
+            
             yield return new WaitForSeconds(2);
 
-            BattleSystem.SetState(new SelectAbilitiesState(BattleSystem));
+            BattleSystemRef.SetState(new SelectAbilitiesState(BattleSystemRef));
         }
 
         public override void End()

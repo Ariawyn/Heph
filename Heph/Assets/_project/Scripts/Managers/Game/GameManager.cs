@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Data;
 using Heph.Scripts.Character;
 using Heph.Scripts.Combat;
 using Heph.Scripts.Managers.Level;
@@ -12,12 +14,13 @@ namespace Heph.Scripts.Managers.Game
 
 		private LevelManager _levelManager;
 
-		[HideInInspector] private const GAME_STATE GameState = GAME_STATE.SPLASH;
+		private const GAME_STATE GameState = GAME_STATE.SPLASH;
 
-		// BAD CODE REGION (WE WILL CHANGE THIS WHEN WE GET A SAVE GAME WHERE WE CAN JUST HAVE DATA WITH ID FOR EACH POSSIBLE ENEMY AND START A BATTLE THAT WAY)
-		private FighterHandler _tempPlayerData;
-		private FighterHandler _tempEnemyData;
+		public FighterDataEntry[] characterDataArray;
+		private Dictionary<string, FighterData> _characterData;
 
+		[NonSerialized] private string currentEnemyFighter = "";
+		
 		private void Awake()
 		{
 			if(_instance == null)
@@ -32,15 +35,17 @@ namespace Heph.Scripts.Managers.Game
 
 		private void Start()
 		{
+			_characterData = new Dictionary<string, FighterData>();
+			foreach (var entry in characterDataArray)
+			{
+				_characterData.Add(entry.ID, entry.data);
+			}
 			_levelManager = FindObjectOfType<LevelManager>();
 		}
 
-		public void StartBattle(FighterHandler player, FighterHandler enemy)
+		public void StartBattle(string enemyFighterID)
 		{
-			// TEMP UNTIL ID AND SAVE GAME SYSTEM SORTED
-			_tempPlayerData = player;
-			_tempEnemyData = enemy;
-
+			currentEnemyFighter = enemyFighterID;
 			StartCoroutine(LevelManager.LoadLevelAsync("CombatTestScene", true, HandleLoadingBattle));
 		}
 
@@ -50,10 +55,19 @@ namespace Heph.Scripts.Managers.Game
 			battleControllerObject.TryGetComponent<BattleSystem>(out var battleSystem);
 			
 			if (battleSystem == null) return;
-			Debug.Log("Passing in fighterhandler data");
-			battleSystem.InitBattle(_tempPlayerData, _tempEnemyData);
+			Debug.Log("Passing in fighter data");
+
+			var playerData = _characterData["player"];
+			var enemyData = _characterData[currentEnemyFighter];
+			battleSystem.InitBattle(playerData, enemyData);
+			CombatEventsManager.Instance.OnBattleStarted();
 		}
 
+		public void MoveToOverworld()
+		{
+			StartCoroutine(LevelManager.LoadLevelAsync("TestScene", true, null));
+		}
+		
 
 		// Update is called once per frame
 		private void Update()

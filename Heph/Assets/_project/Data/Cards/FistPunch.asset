@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0f9a8d45b418ea4298e4739c6f5c8b8, type: 3}
-  m_Name: TestCard
+  m_Name: FistPunch
   m_EditorClassIdentifier: 
-  name: Testing...
-  description: I am a test card
+  name: Fist Punch
+  description: Basic punch. Simple. Easy.
   artwork: {fileID: 0}
   type: 1
-  desireCost: 4
+  desireCost: 1
   abilities:
   - {fileID: 11400000, guid: a4aebfa717a70664899224cbd3c3112e, type: 2}
   ownerRef: {fileID: 0}

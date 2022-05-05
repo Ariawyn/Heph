@@ -1,15 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Heph.Scripts.Combat;
 using Heph.Scripts.Combat.Ability;
 using Heph.Scripts.Combat.Card;
 using Heph.Scripts.Structures.AbilityQueue;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 
 namespace Heph.Scripts.Character
 {
     public class FighterHandler : MonoBehaviour
     {
+        public bool isPlayerOwned;
+
+        public string ID;
+        
         #region Stat Variables
 
         // Health
@@ -26,44 +33,81 @@ namespace Heph.Scripts.Character
 
         // Desire here acting like action points per round of combat
         public Stat desire;
-        
+
         // Is the fighter currently paying desire costs
         public bool isBusyWithDesire = false;
         private int _currentDesireActionIndex = 0;
         private int _currentDesireActionRequiredAmount = 0;
-        
-        
+
         #endregion
 
-        private CardQueue desireCardQueue;
-        public List<BaseCard> deck;
+        #region Card Variables
 
-        public void SetupForCombat()
+        private CardQueue desireCardQueue;
+        private DeckHandler _deckHandler;
+        [SerializeField] public bool shouldSetupStartingDeck = true;
+        [SerializeField] public List<BaseCard> startingDeck;
+
+        #endregion
+
+        #region Setup Functions
+
+        public void Setup(FighterData data)
         {
-            SetupDesireCardQueue();
+            ID = data.ID;
+            maximumHealth = new Stat(data.health);
+            currentHealth = new Stat(data.health);
+            physicalAttack = new Stat(data.physicalAttack);
+            magicalAttack = new Stat(data.magicalAttack);
+            physicalDefense = new Stat(data.physicalDefense);
+            magicalDefense = new Stat(data.magicalDefense);
+            desire = new Stat(data.desire);
+
+            var tempDeckData = data.deck.ToList();
+            _deckHandler = new DeckHandler(this, tempDeckData);
+            _deckHandler.ShuffleDeck();
+
+            desireCardQueue = new CardQueue(desire.Value);
+
             CombatEventsManager.Instance.ActionTick += DesireActionTick;
         }
-        
 
-        private void SetupDesireCardQueue()
+        #endregion
+
+        public List<BaseCard> GetCardsInHand()
         {
-            desireCardQueue = new CardQueue(desire.Value);
+            return _deckHandler.Hand;
         }
 
         public bool QueueCard(BaseCard card)
         {
-            return desireCardQueue.Queue(card);
+            var result = desireCardQueue.Queue(card);
+            if (result) _deckHandler.Hand.Remove(card);
+            return result;
         }
 
-        public IEnumerator ExecuteTopCard(FighterHandler target)
+        public bool RemoveCardFromQueue(BaseCard card)
+        {
+            var result = desireCardQueue.RemoveFromQueue(card);
+            _deckHandler.Hand.Add(card);
+            return result;
+        }
+
+    public IEnumerator ExecuteTopCard(FighterHandler target)
         {
             // HANDLE GETTING AND ACTIVATING TOP CARD
+            if (target == null) yield break;
             if (desireCardQueue == null) yield break;
             if (desireCardQueue.Entries() < 1) yield break;
             
+            // START AND WAIT FOR CARD EXECUTION
             var cardToExecute = desireCardQueue.Dequeue();
-            StartCoroutine(cardToExecute.Activate(this, target));
-
+            var cardExecutionCoroutine = StartCoroutine(cardToExecute.Activate(this, target));
+            yield return cardExecutionCoroutine;
+            
+            // MAKE SURE TO DISCARD CARD
+            _deckHandler.Discard.Add(cardToExecute);
+            
             // HANDLE CARD ACTION COST
             if (cardToExecute.desireCost <= 1) yield break;
             isBusyWithDesire = true;
@@ -98,25 +142,22 @@ namespace Heph.Scripts.Character
             }
         }
 
-        public List<BaseCard> DrawCards()
+        public void HandleStartTurn()
         {
-            if (deck.Count <= 0) return null;
-            Debug.Log("Deck wasnt null");
-            
-            List<BaseCard> drawnCards = new List<BaseCard>();
-            
-            for (var i = 0; i < desire.Value; i++)
-            {
-                // TODO: Make this actually random
-                drawnCards.Add(deck[0]);
-            }
+            Debug.Log("Handling start turn, drawing cards for desire value: " +  desire.Value);
 
-            return drawnCards;
+            StartCoroutine(_deckHandler.DrawCardsTimed(desire.Value, 0.2f, 1));
+        }
+
+        public void HandleEndTurn()
+        {
+            _deckHandler.DiscardHand();
         }
 
         private void HandleDefeat()
         {
-            
+            Debug.Log("Fighter defeated!");
+            CombatEventsManager.Instance.OnFighterDefeatedAction(ID);
         }
     }
 }

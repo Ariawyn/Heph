@@ -193,3 +193,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a337de8254178349b07618f5ebf3d79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterDataArray:
+  - ID: player
+    data: {fileID: 11400000, guid: 10a4abc69ae941342b61e99e016462a9, type: 2}
+  - ID: testEnemy1
+    data: {fileID: 11400000, guid: a11a326a63cb1604b91a5e60467738fa, type: 2}
+  - ID: testEnemy2
+    data: {fileID: 11400000, guid: e9da3f84d0fa8e44cbc77eaee9c07f6c, type: 2}

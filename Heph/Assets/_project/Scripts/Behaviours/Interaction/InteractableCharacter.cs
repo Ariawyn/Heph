@@ -6,7 +6,7 @@ namespace Heph.Scripts.Behaviours.Interaction
 {
     public class InteractableCharacter : Interactable
     {
-        [SerializeField] private FighterHandler fighterData; 
+        [SerializeField] public string fighterID; 
 
         private GameManager _gameManager;
 
@@ -18,15 +18,7 @@ namespace Heph.Scripts.Behaviours.Interaction
 
         public override void Interact()
         {
-            Debug.Log("Hello");
-            
-            // IS THIS THE BEST WAY??????????????
-            var playerGameObject = GameObject.FindWithTag("Player");
-        
-            playerGameObject.TryGetComponent<FighterHandler>(out var playerFighterData);
-            if(playerFighterData == null) return;
-        
-            _gameManager.StartBattle(playerFighterData, fighterData);
+            _gameManager.StartBattle(fighterID);
         }
     }
 }

@@ -13,16 +13,23 @@ namespace Heph.Scripts.Combat
         {
             Debug.Log("Select Abilities State started");
 
+            if (BattleSystemRef.player == null) { Debug.Log("In start of select abilities state, player is null in battlesystem for some reason."); }
+            if (BattleSystemRef.enemy == null) { Debug.Log("In start of select abilities state, enemy is null in battlesystem for some reason."); }
+            
             // DRAW CARDS
-            var cardsInHand = BattleSystem.player.DrawCards();
-            BattleSystem.combatUI.DisplayHand(cardsInHand);
+            BattleSystemRef.player.HandleStartTurn();
+            BattleSystemRef.enemy.HandleStartTurn();
 
+            CombatEventsManager.Instance.OnSelectAbilitiesStateEntered();
+            
             yield return new WaitForSeconds(1);
         }
 
         public override void End()
         {
-            BattleSystem.combatUI.ClearHand();
+            BattleSystemRef.player.HandleEndTurn();
+            BattleSystemRef.enemy.HandleEndTurn();
+            BattleSystemRef.combatUI.ClearBoard();
             Debug.Log("Select Abilities State ended");
         }
     }

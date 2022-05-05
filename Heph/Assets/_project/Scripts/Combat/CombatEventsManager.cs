@@ -1,4 +1,6 @@
 using System;
+using Heph.Scripts.Character;
+using Heph.Scripts.Combat.Card;
 using UnityEngine;
 
 namespace Heph.Scripts.Combat
@@ -19,6 +21,14 @@ namespace Heph.Scripts.Combat
 			}
         }
 
+        public event Action BattleStarted;
+
+        public void OnBattleStarted()
+        {
+            BattleStarted?.Invoke();
+        }
+        
+
         public event Action RoundTick;
         public void OnRoundTick()
         {
@@ -31,11 +41,46 @@ namespace Heph.Scripts.Combat
             ActionTick?.Invoke();
         }
 
+        public event Action SelectAbilitiesStateEntered;
+
+        public void OnSelectAbilitiesStateEntered()
+        {
+            SelectAbilitiesStateEntered?.Invoke();
+        }
+
+        public event Action ResolveAbilitiesStateEntered;
+
+        public void OnResolveAbilitiesStateEntered()
+        {
+            ResolveAbilitiesStateEntered?.Invoke();
+        }
+
         public event Action SelectionConfirmButtonEvent;
 
         public void OnSelectionConfirmButtonPressed()
         {
             SelectionConfirmButtonEvent?.Invoke();
+        }
+
+        public event Action<bool, BaseCard> DrawAction;
+
+        public void OnDrawAction(bool isPlayer, BaseCard cardDrawn)
+        {
+            DrawAction?.Invoke(isPlayer, cardDrawn);
+        }
+
+        public event Action<BaseCard> QueueCardAction;
+
+        public void OnPlayerQueueCardAction(BaseCard cardQueued)
+        {
+            QueueCardAction?.Invoke(cardQueued);
+        }
+
+        public event Action<string> FighterDefeatedAction;
+
+        public void OnFighterDefeatedAction(string fighterID)
+        {
+            FighterDefeatedAction?.Invoke(fighterID);
         }
     }
 }

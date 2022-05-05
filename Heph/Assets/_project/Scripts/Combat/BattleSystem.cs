@@ -1,6 +1,7 @@
 using System;
 using Heph.Scripts.Character;
 using Heph.Scripts.Combat.Card;
+using Heph.Scripts.Managers.Game;
 using Heph.Scripts.Utils.StateMachine;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -9,34 +10,45 @@ namespace Heph.Scripts.Combat
 {
     public class BattleSystem : StateMachine
     {
-        public FighterHandler player;
-        public FighterHandler enemy;
+        [NonSerialized] private GameManager _gameManager;
+        
+        [NonSerialized] public FighterHandler player;
+        [NonSerialized] public FighterHandler enemy;
 
-        public int currentCombatRound = 0;
-        public int currentRoundAction = 0;
+        public ArenaHandler Arena;
 
-        public int highestFighterDesire = 0;
+        [NonSerialized] public int currentCombatRound = 0;
+        [NonSerialized] public int currentRoundAction = 0;
 
-        public int maxRounds = 15;
+        [NonSerialized] public int highestFighterDesire = 0;
+
+        [NonSerialized] private readonly int maxRounds = 15;
 
         public CombatUIHandler combatUI;
-        
-        // TEMP STUFF;
-        public BaseCard testCard;
 
-        public void InitBattle(FighterHandler playerHandler, FighterHandler enemyHandler)
+        public void InitBattle(FighterData playerData, FighterData enemyData)
         {
-            player = playerHandler;
-            enemy = enemyHandler;
-            player.SetupForCombat();
-            enemy.SetupForCombat();
-            player.deck.Add(testCard);
-            enemy.deck.Add(testCard);
+            // Setup game manager ref
+            _gameManager = FindObjectOfType<GameManager>();
+            
+            // Setup player and enemy fighter handlers
+            player = gameObject.AddComponent<FighterHandler>();
+            enemy = gameObject.AddComponent<FighterHandler>();
+            player.Setup(playerData);
+            enemy.Setup(enemyData);
+            // Setup controls over fighter handlers
+            player.isPlayerOwned = true;
+            // TODO: Setup AI control over enemy
+            
+            Debug.Log("Init battle");
+            if (player == null) { Debug.Log("In init battle func in battle system, player is null in battlesystem for some reason."); }
+            if (enemy == null) { Debug.Log("In init battle func in battle system, enemy is null in battlesystem for some reason."); }
             
             currentCombatRound++;
             CombatEventsManager.Instance.OnRoundTick();
 
             CombatEventsManager.Instance.SelectionConfirmButtonEvent += MoveToResolveState;
+            CombatEventsManager.Instance.FighterDefeatedAction += HandleFighterDefeat;
             
             Debug.Log("Player magical defense is (for test): " + player.magicalDefense.Value);
             Debug.Log("Enemy magical defense is (for test): " + enemy.magicalDefense.Value);
@@ -55,6 +67,11 @@ namespace Heph.Scripts.Combat
         
         public void MoveToNextRound()
         {
+            Debug.Log("Battle system is attempting to move to next round");
+            Debug.Log(player == null ? "In move to next round, player is null in battlesystem for some reason." : "PlayerRef is not null in battle system");
+            Debug.Log(enemy == null? "In move to next round, enemy is null in battlesystem for some reason." : "EnemyRef is not null in battle system");
+            Debug.Log("blablabla");
+
             if(currentCombatRound < maxRounds)
             { 
                 currentCombatRound++;
@@ -73,11 +90,18 @@ namespace Heph.Scripts.Combat
 
         private void ResetAfterBattle()
         {
-            player = null;
-            enemy = null;
+            Destroy(player);
+            Destroy(enemy);
             currentCombatRound = 0;
             currentRoundAction = 0;
-            highestFighterDesire = 0;
+            highestFighterDesire = 0; 
+            _gameManager.MoveToOverworld();
+        }
+
+        private void HandleFighterDefeat(string fighterID)
+        {
+            Debug.Log(fighterID != "player" ? "Player won!" : "Player defeated!");
+            ResetAfterBattle();
         }
     }
 }

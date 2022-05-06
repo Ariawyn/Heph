@@ -21,13 +21,16 @@ namespace Heph
         public GameObject playerCardDropArea;
         public Button confirmButton;
 
+        public Slider playerHealthBar;
+        public Slider enemyHealthBar;
+
         public void Start()
         {
             CombatEventsManager.Instance.ActionTick += EndSelection;
             CombatEventsManager.Instance.DrawAction += AddCardToHand;
             CombatEventsManager.Instance.SelectAbilitiesStateEntered += StartSelection;
-
             CombatEventsManager.Instance.BattleStarted += HandleBattleStart;
+            
         }
 
         private void HandleBattleStart()

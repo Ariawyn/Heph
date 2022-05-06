@@ -8,7 +8,6 @@ namespace Heph.Scripts.Combat
     public sealed class CombatEventsManager : MonoBehaviour
     {
         public static CombatEventsManager Instance;
-
         private void Awake()
         {
             if(Instance == null)
@@ -22,7 +21,6 @@ namespace Heph.Scripts.Combat
         }
 
         public event Action BattleStarted;
-
         public void OnBattleStarted()
         {
             BattleStarted?.Invoke();
@@ -42,49 +40,54 @@ namespace Heph.Scripts.Combat
         }
 
         public event Action SelectAbilitiesStateEntered;
-
         public void OnSelectAbilitiesStateEntered()
         {
             SelectAbilitiesStateEntered?.Invoke();
         }
 
         public event Action ResolveAbilitiesStateEntered;
-
         public void OnResolveAbilitiesStateEntered()
         {
             ResolveAbilitiesStateEntered?.Invoke();
         }
 
         public event Action SelectionConfirmButtonEvent;
-
         public void OnSelectionConfirmButtonPressed()
         {
             SelectionConfirmButtonEvent?.Invoke();
         }
 
         public event Action<bool, BaseCard> DrawAction;
-
         public void OnDrawAction(bool isPlayer, BaseCard cardDrawn)
         {
             DrawAction?.Invoke(isPlayer, cardDrawn);
         }
 
         public event Action<BaseCard> QueueCardAction;
-
         public void OnPlayerQueueCardAction(BaseCard cardQueued)
         {
             QueueCardAction?.Invoke(cardQueued);
         }
 
+        public event Action<bool, int> FighterHealthDamagedAction;
+        public void OnFighterDamagedAction(bool isPlayer, int damageAmount)
+        {
+            FighterHealthDamagedAction?.Invoke(isPlayer, damageAmount);
+        }
+        
+        public event Action<bool, int> FighterShieldDamagedAction;
+        public void OnFighterShieldDamagedAction(bool isPlayer, int damageAmount)
+        {
+            FighterShieldDamagedAction?.Invoke(isPlayer, damageAmount);
+        }
+        
         public event Action<string> FighterDefeatedAction;
-
         public void OnFighterDefeatedAction(string fighterID)
         {
             FighterDefeatedAction?.Invoke(fighterID);
         }
 
         public event Action<bool, int> FighterMovementAction;
-
         public void OnFighterMovementAction(bool isPlayer, int movedToIndex)
         {
             Debug.Log("Fighter should move, isPlayer: " + isPlayer + " newIndex: " + movedToIndex);

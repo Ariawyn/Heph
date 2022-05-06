@@ -25,6 +25,7 @@ namespace Heph.Scripts.Character
         // also had to make a set function just for this functionality in Stat though that's not like bad.
         public Stat maximumHealth;
         public Stat currentHealth;
+        public Stat currentShield;
 
         // The basics
         public Stat physicalAttack;
@@ -60,6 +61,7 @@ namespace Heph.Scripts.Character
             ID = data.ID;
             maximumHealth = new Stat(data.health);
             currentHealth = new Stat(data.health);
+            currentShield = new Stat(0);
             physicalAttack = new Stat(data.physicalAttack);
             magicalAttack = new Stat(data.magicalAttack);
             physicalDefense = new Stat(data.physicalDefense);
@@ -105,7 +107,7 @@ namespace Heph.Scripts.Character
             return result;
         }
 
-    public IEnumerator ExecuteTopCard(FighterHandler target)
+        public IEnumerator ExecuteTopCard(FighterHandler target)
         {
             // HANDLE GETTING AND ACTIVATING TOP CARD
             if (target == null) yield break;
@@ -143,14 +145,32 @@ namespace Heph.Scripts.Character
 
         public void HandleDamage(int damageAmount, bool physical)
         {
-            var totalDamageAmount = damageAmount - (physical ? physicalDefense.Value : magicalDefense.Value);
-            if (totalDamageAmount <= 0) totalDamageAmount = 0;
-            if ((currentHealth.Value - totalDamageAmount) > 0)
+            // Handle shields
+            var currentDamageAmount = damageAmount;
+            if (currentShield.Value >= currentDamageAmount)
             {
-                currentHealth.Value -= totalDamageAmount;
+                currentShield.Value -= currentDamageAmount;
+                CombatEventsManager.Instance.OnFighterShieldDamagedAction(isPlayerOwned, currentDamageAmount);
             }
             else
             {
+                currentDamageAmount -= currentShield.Value;
+                CombatEventsManager.Instance.OnFighterShieldDamagedAction(isPlayerOwned, currentShield.Value);
+                currentShield.Value = 0;
+            }
+            
+            // Handle health damage
+            var totalDamageAmount = currentDamageAmount- (physical ? physicalDefense.Value : magicalDefense.Value);
+            if (totalDamageAmount <= 0) totalDamageAmount = 0;
+            
+            if ((currentHealth.Value - totalDamageAmount) > 0)
+            {
+                currentHealth.Value -= totalDamageAmount;
+                CombatEventsManager.Instance.OnFighterDamagedAction(isPlayerOwned, totalDamageAmount);
+            }
+            else
+            {
+                currentHealth.Value = 0;
                 HandleDefeat();
             }
         }

@@ -6,6 +6,7 @@ using Heph.Scripts.Combat;
 using Heph.Scripts.Combat.Ability;
 using Heph.Scripts.Combat.Card;
 using Heph.Scripts.Structures.AbilityQueue;
+using Heph.Scripts.Util;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 
@@ -34,6 +35,9 @@ namespace Heph.Scripts.Character
         // Desire here acting like action points per round of combat
         public Stat desire;
 
+        // Combat related vars
+        public int currentArenaSpaceIndex = 0;
+        
         // Is the fighter currently paying desire costs
         public bool isBusyWithDesire = false;
         private int _currentDesireActionIndex = 0;
@@ -45,8 +49,7 @@ namespace Heph.Scripts.Character
 
         private CardQueue desireCardQueue;
         private DeckHandler _deckHandler;
-        [SerializeField] public bool shouldSetupStartingDeck = true;
-        [SerializeField] public List<BaseCard> startingDeck;
+        [SerializeField] public Optional<List<BaseCard>> startingDeck;
 
         #endregion
 
@@ -70,9 +73,18 @@ namespace Heph.Scripts.Character
             desireCardQueue = new CardQueue(desire.Value);
 
             CombatEventsManager.Instance.ActionTick += DesireActionTick;
+            CombatEventsManager.Instance.FighterMovementAction += MovementActionTick;
         }
 
         #endregion
+
+        public void MovementActionTick(bool isPlayer, int movedToInt)
+        {
+            if (isPlayer == isPlayerOwned)
+            {
+                currentArenaSpaceIndex = movedToInt;
+            }
+        }
 
         public List<BaseCard> GetCardsInHand()
         {
@@ -132,6 +144,7 @@ namespace Heph.Scripts.Character
         public void HandleDamage(int damageAmount, bool physical)
         {
             var totalDamageAmount = damageAmount - (physical ? physicalDefense.Value : magicalDefense.Value);
+            if (totalDamageAmount <= 0) totalDamageAmount = 0;
             if ((currentHealth.Value - totalDamageAmount) > 0)
             {
                 currentHealth.Value -= totalDamageAmount;

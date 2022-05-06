@@ -82,5 +82,13 @@ namespace Heph.Scripts.Combat
         {
             FighterDefeatedAction?.Invoke(fighterID);
         }
+
+        public event Action<bool, int> FighterMovementAction;
+
+        public void OnFighterMovementAction(bool isPlayer, int movedToIndex)
+        {
+            Debug.Log("Fighter should move, isPlayer: " + isPlayer + " newIndex: " + movedToIndex);
+            FighterMovementAction?.Invoke(isPlayer, movedToIndex);
+        }
     }
 }

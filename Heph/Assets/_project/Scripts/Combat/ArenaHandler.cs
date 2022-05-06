@@ -26,12 +26,25 @@ namespace Heph.Scripts.Combat
             }
 
             CombatEventsManager.Instance.BattleStarted += HandleBattleStart;
+            CombatEventsManager.Instance.FighterMovementAction += HandleMovement;
         }
 
         private void HandleBattleStart()
         {
-            playerGO.transform.position = _arenaSpaces[playerStartSpaceIndex].transform.position;
-            enemyGO.transform.position = _arenaSpaces[enemyStartSpaceIndex].transform.position;
+            CombatEventsManager.Instance.OnFighterMovementAction(true, playerStartSpaceIndex);
+            CombatEventsManager.Instance.OnFighterMovementAction(false, enemyStartSpaceIndex);
+        }
+
+        public void HandleMovement(bool isPlayer, int newIndex)
+        {
+            if (isPlayer)
+            {
+                playerGO.transform.position = _arenaSpaces[newIndex].transform.position;
+            }
+            else
+            {
+                enemyGO.transform.position = _arenaSpaces[newIndex].transform.position;
+            }
         }
     }
 }

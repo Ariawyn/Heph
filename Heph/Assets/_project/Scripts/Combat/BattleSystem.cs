@@ -1,6 +1,7 @@
 using System;
 using Heph.Scripts.Character;
 using Heph.Scripts.Combat.Card;
+using Heph.Scripts.Managers.Dialogue;
 using Heph.Scripts.Managers.Game;
 using Heph.Scripts.Utils.StateMachine;
 using UnityEngine;
@@ -24,6 +25,8 @@ namespace Heph.Scripts.Combat
 
         [NonSerialized] private readonly int maxRounds = 15;
 
+        public DialogueManager dialogueManager;
+
         public CombatUIHandler combatUI;
 
         public void InitBattle(FighterData playerData, FighterData enemyData)
@@ -40,6 +43,9 @@ namespace Heph.Scripts.Combat
             player.isPlayerOwned = true;
             // TODO: Setup AI control over enemy
             
+            // Setup INK story for battle
+            //dialogueManager.StartStory();
+
             Debug.Log("Init battle");
             if (player == null) { Debug.Log("In init battle func in battle system, player is null in battlesystem for some reason."); }
             if (enemy == null) { Debug.Log("In init battle func in battle system, enemy is null in battlesystem for some reason."); }

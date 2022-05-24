@@ -6,12 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_project/Scenes/_preload.unity
-    guid: 67c67e0fc6d8abd47a863ad7873aa7dc
-  - enabled: 1
     path: Assets/_project/Scenes/TestScene.unity
     guid: 018247ad1843df64f84eef36c2175d35
   - enabled: 1
     path: Assets/_project/Scenes/CombatTestScene.unity
     guid: 920d9051fa5c5ff4ca9e2bcd5772031b
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: ee25788909875094d8b58402ccd92382,
+      type: 2}

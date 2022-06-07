@@ -87,11 +87,11 @@ namespace Heph.Scripts.Combat
             FighterDefeatedAction?.Invoke(fighterID);
         }
 
-        public event Action<bool, int> FighterMovementAction;
-        public void OnFighterMovementAction(bool isPlayer, int movedToIndex)
+        public event Action<bool, int, bool> FighterMovementAction;
+        public void OnFighterMovementAction(bool isPlayer, int spacesToMove, bool isRetreat)
         {
-            Debug.Log("Fighter should move, isPlayer: " + isPlayer + " newIndex: " + movedToIndex);
-            FighterMovementAction?.Invoke(isPlayer, movedToIndex);
+            Debug.Log("Fighter should move, isPlayer: " + isPlayer + ", spacesToMove: " + spacesToMove + ", isRetreat: " + isRetreat);
+            FighterMovementAction?.Invoke(isPlayer, spacesToMove, isRetreat);
         }
 
         public event Action<bool> FighterDialogueStartAction;

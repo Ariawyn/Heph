@@ -11,20 +11,28 @@ namespace Heph.Scripts.Combat
 
         public GameObject playerGO;
         public int currentPlayerOccupiedSpaceIndex = -1;
+        public int currentPlayerFacing = 1;
         public GameObject enemyGO;
         public int currentEnemyOccupiedSpaceIndex = -1;
+        public int currentEnemyFacing = -1;
         
         public int playerStartSpaceIndex;
         public int enemyStartSpaceIndex;
 
+        public int maxArenaSpaceIndex = -1;
+        public int minArenaSpaceIndex = -1;
         public int currentDistanceBetweenFighters;
+
+        public bool hasSetupFighters = false;
         
         private void Start()
         {
+            minArenaSpaceIndex = maxArenaSpaceIndex = 0;
             _arenaSpaces = new List<Transform>();
             for (var i = 0; i < arena.childCount; i++)
             {
                 _arenaSpaces.Add(arena.GetChild(i));
+                maxArenaSpaceIndex = i;
             }
 
             CombatEventsManager.Instance.BattleStarted += HandleBattleStart;
@@ -33,21 +41,21 @@ namespace Heph.Scripts.Combat
 
         private void HandleBattleStart()
         {
-            CombatEventsManager.Instance.OnFighterMovementAction(true, playerStartSpaceIndex);
-            CombatEventsManager.Instance.OnFighterMovementAction(false, enemyStartSpaceIndex);
+            HandleMovementToSpecificIndex(true, playerStartSpaceIndex);
+            HandleMovementToSpecificIndex(false, enemyStartSpaceIndex);
+            hasSetupFighters = true;
         }
 
-        public void HandleMovement(bool isPlayer, int newIndex)
+        public void HandleMovement(bool isPlayer, int spacesToMove, bool isRetreat)
         {
-            var currentCharacterGO = isPlayer ? playerGO : enemyGO;
-            var currentOpposingCharacterGO = isPlayer ? enemyGO : playerGO;
-
-            var facingPositive = true;
-            if ((currentPlayerOccupiedSpaceIndex != -1) && (currentEnemyOccupiedSpaceIndex != -1))
-            {
-                facingPositive = currentPlayerOccupiedSpaceIndex <= currentEnemyOccupiedSpaceIndex;
+            for (var i = 0; i < spacesToMove; i++) { 
+                var result = Move(isPlayer, isRetreat);
+                if (!result) break;
             }
-            
+        }
+
+        public void HandleMovementToSpecificIndex(bool isPlayer, int newIndex)
+        {
             if (isPlayer)
             {
                 playerGO.transform.position = _arenaSpaces[newIndex].transform.position;
@@ -58,6 +66,36 @@ namespace Heph.Scripts.Combat
                 enemyGO.transform.position = _arenaSpaces[newIndex].transform.position;
                 currentEnemyOccupiedSpaceIndex = newIndex;
             }
+        }
+
+        public bool IsOccupied(int index)
+        {
+            return index == currentPlayerOccupiedSpaceIndex || index == currentEnemyOccupiedSpaceIndex;
+        }
+
+        public bool Move(bool isPlayer, bool isRetreat)
+        {
+            var desiredIndex = -1;
+            if (isPlayer)
+            {
+                desiredIndex = isRetreat
+                    ? currentPlayerOccupiedSpaceIndex + (1 * currentPlayerFacing)
+                    : currentPlayerOccupiedSpaceIndex - (1 * currentPlayerFacing);
+                if (IsOccupied(desiredIndex)) return false; // TODO: Add Push? If Advance
+                if (desiredIndex < minArenaSpaceIndex || desiredIndex > maxArenaSpaceIndex) return false;
+                
+                playerGO.transform.position = _arenaSpaces[desiredIndex].transform.position;
+                currentPlayerOccupiedSpaceIndex = desiredIndex;
+                return true;
+            }
+            desiredIndex = isRetreat
+                ? currentEnemyOccupiedSpaceIndex + (1 * currentEnemyFacing)
+                : currentEnemyOccupiedSpaceIndex - (1 * currentEnemyFacing);
+            if (IsOccupied(desiredIndex)) return false; // TODO: Add Push? If Advance
+            if (desiredIndex < minArenaSpaceIndex || desiredIndex > maxArenaSpaceIndex) return false;
+            enemyGO.transform.position = _arenaSpaces[desiredIndex].transform.position;
+            currentEnemyOccupiedSpaceIndex = desiredIndex;
+            return true;
         }
     }
 }

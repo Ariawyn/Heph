@@ -87,18 +87,9 @@ namespace Heph.Scripts.Character
             }
             
             CombatEventsManager.Instance.ActionTick += DesireActionTick;
-            CombatEventsManager.Instance.FighterMovementAction += MovementActionTick;
         }
 
         #endregion
-
-        public void MovementActionTick(bool isPlayer, int movedToInt)
-        {
-            if (isPlayer == isPlayerOwned)
-            {
-                currentArenaSpaceIndex = movedToInt;
-            }
-        }
 
         public List<BaseCard> GetCardsInHand()
         {

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Transactions;
 using Heph.Scripts.Combat.Card;
 using UnityEngine;
 
@@ -12,7 +13,17 @@ namespace Heph.Scripts.Combat.Ability
         
         public override bool Activate(BaseCard owner)
         {
-            throw new NotImplementedException();
+            if (amount + owner.ownerRef.currentHealth.Value > owner.ownerRef.maximumHealth.Value)
+            {
+                var overhealth = (amount + owner.ownerRef.currentHealth.Value) - owner.ownerRef.maximumHealth.Value;
+                owner.ownerRef.currentHealth.Value += owner.ownerRef.maximumHealth.Value;
+                owner.ownerRef.currentOverhealth.Value = overhealth;
+            }
+            else
+            {
+                owner.ownerRef.currentHealth.Value += amount;
+            }
+            return true;
         }
     }
 }

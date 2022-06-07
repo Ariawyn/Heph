@@ -60,7 +60,12 @@ namespace Heph.Scripts.Combat
 
                     if (playerRoutine != null) yield return playerRoutine;
                     if (enemyRoutine != null) yield return enemyRoutine;
-                    yield return new WaitForSeconds(1);
+
+                    while (BattleSystemRef.isWaitingOnDialogue)
+                    {
+                        yield return null; // Wait until next frame
+                    }
+                    yield return new WaitForSeconds(1); // Wait one second before continuing resolve loop
                 }
                 else
                 {

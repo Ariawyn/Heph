@@ -1,3 +1,4 @@
+using Heph.Scripts.Combat;
 using UnityEngine;
 using Ink.Runtime;
 using TMPro;
@@ -26,6 +27,9 @@ namespace Heph.Scripts.Managers.Dialogue
         public TextMeshProUGUI characterNameTextArea;
         public TextMeshProUGUI dialogueTextArea;
         
+        // BATTLE RELATED VAR
+        private BattleSystem _battleSystem;
+        
         private void Awake()
         {
             if(_instance == null)
@@ -42,10 +46,18 @@ namespace Heph.Scripts.Managers.Dialogue
             
             dialoguePanel.SetActive(false);
             
+            _playerInputs = new PlayerInputs();
             _playerInputs.Player.Interact.performed += HandleInteract;
             _playerInputs.Player.Interact.Enable();
+
+            CombatEventsManager.Instance.FighterDialogueStartAction += StartupDialogueInstance;
         }
 
+        private void Start()
+        {
+            _battleSystem = GetComponent<BattleSystem>();
+        }
+        
         public void StartStory(TextAsset inkJSON)
         {
             if (_storyIsLoaded) return;
@@ -53,7 +65,7 @@ namespace Heph.Scripts.Managers.Dialogue
             _storyIsLoaded = true;
         }
 
-        public void StartupDialogueInstance()
+        public void StartupDialogueInstance(bool playerStartedDialogue)
         {
             ToggleDialogue(true);
             AdvanceDialogue();
@@ -63,6 +75,7 @@ namespace Heph.Scripts.Managers.Dialogue
         {
             _dialogueIsActive = setActiveValue;
             dialoguePanel.SetActive(setActiveValue);
+            _battleSystem.isWaitingOnDialogue = setActiveValue;
         }
 
         public void AdvanceDialogue()
@@ -72,6 +85,10 @@ namespace Heph.Scripts.Managers.Dialogue
             if (_currentStory.canContinue)
             {
                 dialogueTextArea.text = _currentStory.Continue();
+            }
+            else
+            {
+                ToggleDialogue(false);
             }
         }
 

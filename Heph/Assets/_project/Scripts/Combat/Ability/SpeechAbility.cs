@@ -9,7 +9,8 @@ namespace Heph.Scripts.Combat.Ability
     {
         public override bool Activate(BaseCard owner)
         {
-            throw new NotImplementedException();
+            owner.ownerRef.AttemptToStartDialogue();
+            return true;
         }
     }
 }

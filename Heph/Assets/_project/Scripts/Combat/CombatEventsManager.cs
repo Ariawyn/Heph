@@ -93,5 +93,13 @@ namespace Heph.Scripts.Combat
             Debug.Log("Fighter should move, isPlayer: " + isPlayer + " newIndex: " + movedToIndex);
             FighterMovementAction?.Invoke(isPlayer, movedToIndex);
         }
+
+        public event Action<bool> FighterDialogueStartAction;
+
+        public void OnFighterDialogueStartAction(bool isPlayer)
+        {
+            Debug.Log("Fighter should start dialogue, isPlayer: " + isPlayer);
+            FighterDialogueStartAction.Invoke(isPlayer);
+        }
     }
 }

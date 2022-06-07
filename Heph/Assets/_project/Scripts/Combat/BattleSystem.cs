@@ -26,6 +26,7 @@ namespace Heph.Scripts.Combat
         [NonSerialized] private readonly int maxRounds = 15;
 
         public DialogueManager dialogueManager;
+        public bool isWaitingOnDialogue = false;
 
         public CombatUIHandler combatUI;
 
@@ -37,14 +38,12 @@ namespace Heph.Scripts.Combat
             // Setup player and enemy fighter handlers
             player = gameObject.AddComponent<FighterHandler>();
             enemy = gameObject.AddComponent<FighterHandler>();
-            player.Setup(playerData);
-            enemy.Setup(enemyData);
-            // Setup controls over fighter handlers
-            player.isPlayerOwned = true;
-            // TODO: Setup AI control over enemy
+            player.Setup(playerData, true);
+            enemy.Setup(enemyData, false);
             
             // Setup INK story for battle
-            //dialogueManager.StartStory();
+            var story = _gameManager.storylibrary.GetCurrentStoryForEnemy(enemyData.ID);
+            dialogueManager.StartStory(story);
 
             Debug.Log("Init battle");
             if (player == null) { Debug.Log("In init battle func in battle system, player is null in battlesystem for some reason."); }
@@ -98,6 +97,7 @@ namespace Heph.Scripts.Combat
         {
             Destroy(player);
             Destroy(enemy);
+            dialogueManager.ExitStory();
             currentCombatRound = 0;
             currentRoundAction = 0;
             highestFighterDesire = 0; 

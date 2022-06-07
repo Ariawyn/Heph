@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 582100837185920901}
   - component: {fileID: 5185316077297379151}
   - component: {fileID: 8908099771508213194}
+  - component: {fileID: 1987507780817471712}
   m_Layer: 0
   m_Name: __app
   m_TagString: Untagged
@@ -77,3 +78,18 @@ MonoBehaviour:
     data: {fileID: 11400000, guid: a11a326a63cb1604b91a5e60467738fa, type: 2}
   - ID: testEnemy2
     data: {fileID: 11400000, guid: e9da3f84d0fa8e44cbc77eaee9c07f6c, type: 2}
+--- !u!114 &1987507780817471712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7442417464423565527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cee73a5fb22ec034b87b3f26ecb693de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stories:
+  - {fileID: 11400000, guid: bfd307d5baa339c4f86e0f030001d250, type: 2}
+  - {fileID: 11400000, guid: d2998d8b30112ff46bffc20d175b673d, type: 2}

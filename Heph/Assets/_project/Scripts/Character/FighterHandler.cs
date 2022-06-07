@@ -25,7 +25,9 @@ namespace Heph.Scripts.Character
         // also had to make a set function just for this functionality in Stat though that's not like bad.
         public Stat maximumHealth;
         public Stat currentHealth;
+        public Stat currentOverhealth;
         public Stat currentShield;
+        
 
         // The basics
         public Stat physicalAttack;
@@ -44,6 +46,9 @@ namespace Heph.Scripts.Character
         private int _currentDesireActionIndex = 0;
         private int _currentDesireActionRequiredAmount = 0;
 
+        // AI Handler
+        private AIFighterController AIController;
+
         #endregion
 
         #region Card Variables
@@ -56,12 +61,13 @@ namespace Heph.Scripts.Character
 
         #region Setup Functions
 
-        public void Setup(FighterData data)
+        public void Setup(FighterData data, bool playerOwned)
         {
             ID = data.ID;
             maximumHealth = new Stat(data.health);
             currentHealth = new Stat(data.health);
             currentShield = new Stat(0);
+            currentOverhealth = new Stat(0);
             physicalAttack = new Stat(data.physicalAttack);
             magicalAttack = new Stat(data.magicalAttack);
             physicalDefense = new Stat(data.physicalDefense);
@@ -74,6 +80,12 @@ namespace Heph.Scripts.Character
 
             desireCardQueue = new CardQueue(desire.Value);
 
+            isPlayerOwned = playerOwned;
+            if (!isPlayerOwned)
+            {
+                AIController = new AIFighterController(this);
+            }
+            
             CombatEventsManager.Instance.ActionTick += DesireActionTick;
             CombatEventsManager.Instance.FighterMovementAction += MovementActionTick;
         }
@@ -129,6 +141,11 @@ namespace Heph.Scripts.Character
             _currentDesireActionRequiredAmount = cardToExecute.desireCost;
         }
 
+        public void AttemptToStartDialogue()
+        {
+            CombatEventsManager.Instance.OnFighterDialogueStartAction(isPlayerOwned);
+        }
+        
         private void DesireActionTick()
         {
             if (_currentDesireActionIndex + 1 >= _currentDesireActionRequiredAmount)
@@ -184,6 +201,11 @@ namespace Heph.Scripts.Character
 
         public void HandleEndTurn()
         {
+            // Remove all overhealth
+            currentOverhealth.Value = 0;
+            // Remove all shield
+            currentShield.Value = 0;
+            // Discard hand
             _deckHandler.DiscardHand();
         }
 

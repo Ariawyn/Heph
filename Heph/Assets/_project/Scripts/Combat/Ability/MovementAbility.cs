@@ -18,15 +18,20 @@ namespace Heph.Scripts.Combat.Ability
             {
                 if (owner.ownerRef.currentArenaSpaceIndex > 0) amountOfSpaces += 1;
                 var newIndex = owner.ownerRef.currentArenaSpaceIndex - amountOfSpaces;
+                
+                // TODO: Figure out better movement handling
                 if (newIndex <= -6) newIndex = -6;
+                if (newIndex == 0) newIndex = 1;
                 CombatEventsManager.Instance.OnFighterMovementAction(owner.ownerRef.isPlayerOwned, newIndex);
                 return true;
             }
             else
             {
+                // TODO: Figure out better movement handling
                 if (owner.ownerRef.currentArenaSpaceIndex < 0) amountOfSpaces += 1;
                 var newIndex = owner.ownerRef.currentArenaSpaceIndex + amountOfSpaces;
                 if (newIndex >= 6) newIndex = 6;
+                if (newIndex == 0) newIndex = -1;
                 CombatEventsManager.Instance.OnFighterMovementAction(owner.ownerRef.isPlayerOwned, newIndex);
                 return true;
             }

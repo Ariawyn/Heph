@@ -6,12 +6,14 @@ namespace Heph.Scripts.Combat
 {
     public class ArenaHandler : MonoBehaviour
     {
-        [SerializeField] public ArenaSpaceEntry[] arenaSpacesArray;
-        private Dictionary<int, GameObject> _arenaSpaces;
+        [SerializeField] public Transform arena;
+        private List<Transform> _arenaSpaces;
 
         public GameObject playerGO;
+        public int currentPlayerOccupiedSpaceIndex = -1;
         public GameObject enemyGO;
-
+        public int currentEnemyOccupiedSpaceIndex = -1;
+        
         public int playerStartSpaceIndex;
         public int enemyStartSpaceIndex;
 
@@ -19,10 +21,10 @@ namespace Heph.Scripts.Combat
         
         private void Start()
         {
-            _arenaSpaces = new Dictionary<int, GameObject>();
-            foreach (var entry in arenaSpacesArray)
+            _arenaSpaces = new List<Transform>();
+            for (var i = 0; i < arena.childCount; i++)
             {
-                _arenaSpaces.Add(entry.index, entry.space);
+                _arenaSpaces.Add(arena.GetChild(i));
             }
 
             CombatEventsManager.Instance.BattleStarted += HandleBattleStart;
@@ -37,13 +39,24 @@ namespace Heph.Scripts.Combat
 
         public void HandleMovement(bool isPlayer, int newIndex)
         {
+            var currentCharacterGO = isPlayer ? playerGO : enemyGO;
+            var currentOpposingCharacterGO = isPlayer ? enemyGO : playerGO;
+
+            var facingPositive = true;
+            if ((currentPlayerOccupiedSpaceIndex != -1) && (currentEnemyOccupiedSpaceIndex != -1))
+            {
+                facingPositive = currentPlayerOccupiedSpaceIndex <= currentEnemyOccupiedSpaceIndex;
+            }
+            
             if (isPlayer)
             {
                 playerGO.transform.position = _arenaSpaces[newIndex].transform.position;
+                currentPlayerOccupiedSpaceIndex = newIndex;
             }
             else
             {
                 enemyGO.transform.position = _arenaSpaces[newIndex].transform.position;
+                currentEnemyOccupiedSpaceIndex = newIndex;
             }
         }
     }

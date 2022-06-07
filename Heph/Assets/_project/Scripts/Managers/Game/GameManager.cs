@@ -20,6 +20,8 @@ namespace Heph.Scripts.Managers.Game
 		private Dictionary<string, FighterData> _characterData;
 
 		[NonSerialized] private string currentEnemyFighter = "";
+
+		public StoryLibrary storylibrary;
 		
 		private void Awake()
 		{
@@ -41,6 +43,7 @@ namespace Heph.Scripts.Managers.Game
 				_characterData.Add(entry.ID, entry.data);
 			}
 			_levelManager = FindObjectOfType<LevelManager>();
+			storylibrary = GetComponent<StoryLibrary>();
 		}
 
 		public void StartBattle(string enemyFighterID)

@@ -49,8 +49,12 @@ namespace Heph.Scripts.Combat
         public void HandleMovement(bool isPlayer, int spacesToMove, bool isRetreat)
         {
             for (var i = 0; i < spacesToMove; i++) { 
-                var result = Move(isPlayer, isRetreat);
-                if (!result) break;
+                var result = Move(isPlayer, isRetreat, false);
+                
+                if(result == -1) break;
+                
+                if (isPlayer) currentPlayerOccupiedSpaceIndex = result;
+                else currentEnemyOccupiedSpaceIndex = result;
             }
         }
 
@@ -73,29 +77,52 @@ namespace Heph.Scripts.Combat
             return index == currentPlayerOccupiedSpaceIndex || index == currentEnemyOccupiedSpaceIndex;
         }
 
-        public bool Move(bool isPlayer, bool isRetreat)
+        public int Move(bool isPlayer, bool isRetreat, bool isPush)
         {
             var desiredIndex = -1;
-            if (isPlayer)
+
+            desiredIndex = isPlayer
+                ? CalculateDesiredIndex(isRetreat, currentPlayerOccupiedSpaceIndex, currentPlayerFacing)
+                : CalculateDesiredIndex(isRetreat, currentEnemyOccupiedSpaceIndex, currentEnemyFacing);
+
+            
+            if (!isPush)
             {
-                desiredIndex = isRetreat
-                    ? currentPlayerOccupiedSpaceIndex + (1 * currentPlayerFacing)
-                    : currentPlayerOccupiedSpaceIndex - (1 * currentPlayerFacing);
-                if (IsOccupied(desiredIndex)) return false; // TODO: Add Push? If Advance
-                if (desiredIndex < minArenaSpaceIndex || desiredIndex > maxArenaSpaceIndex) return false;
-                
-                playerGO.transform.position = _arenaSpaces[desiredIndex].transform.position;
-                currentPlayerOccupiedSpaceIndex = desiredIndex;
-                return true;
+                var shouldPush = IsOccupied(desiredIndex);
+                var pushResult = -1;
+                if (shouldPush) pushResult = Move(!isPlayer, true, true);
+                if (shouldPush && (pushResult == -1)) return -1;
             }
-            desiredIndex = isRetreat
-                ? currentEnemyOccupiedSpaceIndex + (1 * currentEnemyFacing)
-                : currentEnemyOccupiedSpaceIndex - (1 * currentEnemyFacing);
-            if (IsOccupied(desiredIndex)) return false; // TODO: Add Push? If Advance
-            if (desiredIndex < minArenaSpaceIndex || desiredIndex > maxArenaSpaceIndex) return false;
-            enemyGO.transform.position = _arenaSpaces[desiredIndex].transform.position;
-            currentEnemyOccupiedSpaceIndex = desiredIndex;
-            return true;
+            
+            if (desiredIndex < minArenaSpaceIndex || desiredIndex > maxArenaSpaceIndex) return -1;
+
+            var currentCharacterGO = isPlayer ? playerGO : enemyGO;
+            currentCharacterGO.transform.position = _arenaSpaces[desiredIndex].transform.position;
+
+            RefreshCharactersFacing();
+            
+            return desiredIndex;
+        }
+
+        private static int CalculateDesiredIndex(bool isRetreat, int currentOccupiedIndex, int currentFacing)
+        {
+            return isRetreat
+                ? currentOccupiedIndex - (1 * currentFacing)
+                : currentOccupiedIndex + (1 * currentFacing);
+        }
+
+        private void RefreshCharactersFacing()
+        {
+            if (currentPlayerOccupiedSpaceIndex < currentEnemyOccupiedSpaceIndex)
+            {
+                currentPlayerFacing = 1;
+                currentEnemyFacing = -1;
+            }
+            else
+            {
+                currentPlayerFacing = -1;
+                currentEnemyFacing = 1;
+            }
         }
     }
 }

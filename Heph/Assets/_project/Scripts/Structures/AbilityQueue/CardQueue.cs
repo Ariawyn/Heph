@@ -25,7 +25,7 @@ namespace Heph.Scripts.Structures.AbilityQueue
         
         public bool Queue(BaseCard card)
         {
-            if (card.type == CardType.None) return false;
+            if (card.type == CARD_TYPE.NONE) return false;
             if (card.desireCost + _currentDesireCost > _maxDesire) return false;
 
             _cards.Add(card);

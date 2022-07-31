@@ -15,5 +15,6 @@ namespace Heph.Scripts.Character
         public int magicalDefense;
         public int desire;
         public BaseCard[] deck;
+        public BaseCard[] flirtDeck;
     }
 }

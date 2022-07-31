@@ -23,9 +23,17 @@ namespace Heph
 
         private void StartSelectingAbilities()
         {
+            // MAKE SURE AI HAS A FULL HAND (WE ARE CHECKING FOR THIS BUT IT SHOULD NOT BE AN ISSUE IN THE FIRST PLACE???)
             _currentAvailableCards = _fighter.GetCardsInHand();
+            if (_currentAvailableCards.Count != _fighter.desire.baseValue)
+            {
+                Debug.Log("For some reason AI fighter didnt have full hand, drawing " + (_fighter.desire.baseValue - _currentAvailableCards.Count) + " cards.");
+                _fighter.DrawCards(_fighter.desire.baseValue - _currentAvailableCards.Count);
+            }
+            Debug.Log("AI has "  +_currentAvailableCards.Count + " cards in hand at the moment");
             var howManyCardsToAttemptToQueue = _fighter.desire.Value;
             if (howManyCardsToAttemptToQueue > _currentAvailableCards.Count) howManyCardsToAttemptToQueue = _currentAvailableCards.Count;
+            Debug.Log("AI wants to queue : " + howManyCardsToAttemptToQueue + " cards.");
             for (var i = 0; i < howManyCardsToAttemptToQueue; i++)
             {
                 var cardToQueue = SelectCard(_currentAvailableCards);
@@ -33,12 +41,14 @@ namespace Heph
                 {
                     _fighter.QueueCard(cardToQueue);
                     _currentDesireAmountUsed += cardToQueue.desireCost;
-                    _currentAvailableCards = _fighter.GetCardsInHand();
+                    //_currentAvailableCards = _fighter.GetCardsInHand(); FOR SOME REASON THIS WAS NOT REMOVING CARDS THAT WERE IN QUEUE AND NOT IN HAND AS IF QUEUEING CARD DOES NOT REMOVE IT???
+                    _currentAvailableCards.Remove(cardToQueue);
                 }
                 else
                 {
                     break;
                 }
+
             }
         }
 

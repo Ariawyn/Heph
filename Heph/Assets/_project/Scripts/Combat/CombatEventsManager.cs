@@ -8,6 +8,9 @@ namespace Heph.Scripts.Combat
     public sealed class CombatEventsManager : MonoBehaviour
     {
         public static CombatEventsManager Instance;
+
+        public BattleSystem battleSystemRef;
+        
         private void Awake()
         {
             if(Instance == null)
@@ -70,7 +73,7 @@ namespace Heph.Scripts.Combat
         }
 
         public event Action<bool, int> FighterHealthDamagedAction;
-        public void OnFighterDamagedAction(bool isPlayer, int damageAmount)
+        public void OnFighterHealthDamagedAction(bool isPlayer, int damageAmount)
         {
             FighterHealthDamagedAction?.Invoke(isPlayer, damageAmount);
         }
@@ -99,7 +102,42 @@ namespace Heph.Scripts.Combat
         public void OnFighterDialogueStartAction(bool isPlayer)
         {
             Debug.Log("Fighter should start dialogue, isPlayer: " + isPlayer);
-            FighterDialogueStartAction.Invoke(isPlayer);
+            FighterDialogueStartAction?.Invoke(isPlayer);
+        }
+
+        public event Action<bool, int, bool> FighterDialogueChoiceAction;
+
+        public void OnFighterDialogueChoiceAction(bool isPlayer, int choiceIndex, bool isDialogueCard)
+        {
+            FighterDialogueChoiceAction?.Invoke(isPlayer, choiceIndex, isDialogueCard);
+        }
+
+        public event Action<bool, BaseCard> CardBeingResolvedAction;
+
+        public void OnCardBeingResolvedAction(bool isPlayer, BaseCard card)
+        {
+            CardBeingResolvedAction?.Invoke(isPlayer, card);
+        }
+
+        public event Action<bool, bool, bool> ToggleChoicesUI;
+
+        public void OnToggleChoicesUI(bool isPlayer, bool isCardSelection, bool isDialogueCard)
+        {
+            ToggleChoicesUI?.Invoke(isPlayer, isCardSelection, isDialogueCard);
+        }
+
+        public event Action<bool> ShouldDraftCardAction;
+
+        public void OnShouldDraftCardAction(bool isPlayer)
+        {
+            ShouldDraftCardAction?.Invoke(isPlayer);
+        }
+
+        public event Action<bool> FinishedDraftingCardAction;
+
+        public void OnFinishedDraftingCardAction(bool isPlayer)
+        {
+            FinishedDraftingCardAction?.Invoke(isPlayer);
         }
     }
 }

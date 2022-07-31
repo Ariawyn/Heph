@@ -1,7 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Heph.Scripts.Combat.Card;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Heph.Scripts.Combat
 {
@@ -21,6 +24,18 @@ namespace Heph.Scripts.Combat
             BattleSystemRef.enemy.HandleStartTurn();
 
             CombatEventsManager.Instance.OnSelectAbilitiesStateEntered();
+            
+            // HANDLE SECOND DEVIATION STUFF IF NEEDED
+            if (BattleSystemRef.currentDeviationControl is DEVIATION_CONTROL.SECOND or DEVIATION_CONTROL.BOTH)
+            {
+                var values = Enum.GetValues(typeof(CARD_TYPE)).Cast<CARD_TYPE>().ToList();
+                values.Remove(CARD_TYPE.NONE);
+                //if (BattleSystemRef.currentDeviationControl != DEVIATION_CONTROL.BOTH) values.Remove(CARD_TYPE.FLIRT);
+                values.Remove(CARD_TYPE.FLIRT);
+                var currentRoundExpectation = values[BattleSystemRef.randomGen.Next(values.Count)];
+                BattleSystemRef.currentExpectationCardType = currentRoundExpectation;
+                Debug.Log("Updated societal expectation of card type: " + BattleSystemRef.currentExpectationCardType);
+            }
             
             yield return new WaitForSeconds(1);
         }

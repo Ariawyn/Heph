@@ -34,3 +34,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d7d805633edf4bf48989c5cf50781191, type: 2}
   - {fileID: 11400000, guid: d7d805633edf4bf48989c5cf50781191, type: 2}
   - {fileID: 11400000, guid: d7d805633edf4bf48989c5cf50781191, type: 2}
+  flirtDeck:
+  - {fileID: 11400000, guid: 58dbd1b4c2dd72b4ca482716b6331a42, type: 2}
+  - {fileID: 11400000, guid: e5d74b02ac9338c48bff4ad47ee40512, type: 2}
+  - {fileID: 11400000, guid: 82630eaab58732146a48d5e3b06887b6, type: 2}
+  - {fileID: 11400000, guid: 69f6723f3b027544297f61068bb1a4b7, type: 2}

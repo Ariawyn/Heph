@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Heph.Scripts.Combat;
 using UnityEngine;
 using Ink.Runtime;
@@ -18,6 +19,10 @@ namespace Heph.Scripts.Managers.Dialogue
         // INK SPECIFIC TAGS WE USE
         private const string SPEAKER_TAG = "speaker";
         private const string LAYOUT_TAG = "layout";
+        private const string DIALOGUE_CHOICE_TYPE_TAG = "choice_type";
+        
+        // INK TAG SPECIFIC VAR FOR CHECKING
+        private bool currentDialogueCardChoiceType = false;
         
         // INPUT HANDLING VAR
         private PlayerInputs _playerInputs;
@@ -51,6 +56,7 @@ namespace Heph.Scripts.Managers.Dialogue
             _playerInputs.Player.Interact.Enable();
 
             CombatEventsManager.Instance.FighterDialogueStartAction += StartupDialogueInstance;
+            CombatEventsManager.Instance.FighterDialogueChoiceAction += HandleChoiceMade;
         }
 
         private void Start()
@@ -85,6 +91,12 @@ namespace Heph.Scripts.Managers.Dialogue
             if (_currentStory.canContinue)
             {
                 dialogueTextArea.text = _currentStory.Continue();
+                HandleTags(_currentStory.currentTags);
+                if (_currentStory.currentChoices.Count > 0)
+                {
+                    // Handle dialogue choice tags
+                    SetupChoices();
+                }
             }
             else
             {
@@ -92,6 +104,38 @@ namespace Heph.Scripts.Managers.Dialogue
             }
         }
 
+        private bool HandleTags(List<string> currentTags)
+        {
+            if (currentTags.Count <= 0) return false;
+            foreach (var tag in currentTags)
+            {
+                var splitTag = tag.Split(':');
+                if (splitTag.Length != 2)
+                {
+                    Debug.LogError("Dialogue tag could not be parsed: " + tag);
+                }
+                var tagKey = splitTag[0].Trim();
+                var tagValue = splitTag[1].Trim();
+
+                switch (tagKey)
+                {
+                    case DIALOGUE_CHOICE_TYPE_TAG:
+                        Debug.Log("Updating dialogue card choice type thingy!!!");
+                        currentDialogueCardChoiceType = tagValue == "flirt_card";
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            return true;
+        }
+
+        public List<Choice> GetCurrentChoices()
+        {
+            return _currentStory.currentChoices;
+        }
+        
         public void ExitStory()
         {
             _storyIsLoaded = false;
@@ -104,6 +148,18 @@ namespace Heph.Scripts.Managers.Dialogue
         {
             if (!_dialogueIsActive) return;
             AdvanceDialogue();
+        }
+
+        private void HandleChoiceMade(bool isPlayer, int choiceIndex, bool isDialogueCard)
+        {
+            CombatEventsManager.Instance.OnToggleChoicesUI(true, isDialogueCard, isDialogueCard);
+            _currentStory.ChooseChoiceIndex(choiceIndex);
+            AdvanceDialogue();
+        }
+
+        private void SetupChoices()
+        {
+            CombatEventsManager.Instance.OnToggleChoicesUI(true, currentDialogueCardChoiceType, currentDialogueCardChoiceType);
         }
     }
 }

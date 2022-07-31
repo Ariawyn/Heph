@@ -21,8 +21,15 @@ MonoBehaviour:
   desire: 5
   deck:
   - {fileID: 11400000, guid: f85bcdba3cb37dd49939da4ebf25d88e, type: 2}
-  - {fileID: 11400000, guid: f85bcdba3cb37dd49939da4ebf25d88e, type: 2}
-  - {fileID: 11400000, guid: f85bcdba3cb37dd49939da4ebf25d88e, type: 2}
-  - {fileID: 11400000, guid: 41c8140234cacfc4e84db22b6fb6f2a4, type: 2}
-  - {fileID: 11400000, guid: 41c8140234cacfc4e84db22b6fb6f2a4, type: 2}
-  - {fileID: 11400000, guid: 41c8140234cacfc4e84db22b6fb6f2a4, type: 2}
+  - {fileID: 11400000, guid: 141cc3a1d1f9160409118a6a559191d7, type: 2}
+  - {fileID: 11400000, guid: b91286376eb65564db258dfbfe2db8ae, type: 2}
+  - {fileID: 11400000, guid: abd31cef73c66e64da1ee736b0772372, type: 2}
+  - {fileID: 11400000, guid: 07c52c5161201c54b922de4e7cf44265, type: 2}
+  - {fileID: 11400000, guid: 07c52c5161201c54b922de4e7cf44265, type: 2}
+  - {fileID: 11400000, guid: 141cc3a1d1f9160409118a6a559191d7, type: 2}
+  - {fileID: 11400000, guid: b91286376eb65564db258dfbfe2db8ae, type: 2}
+  flirtDeck:
+  - {fileID: 11400000, guid: 58dbd1b4c2dd72b4ca482716b6331a42, type: 2}
+  - {fileID: 11400000, guid: e5d74b02ac9338c48bff4ad47ee40512, type: 2}
+  - {fileID: 11400000, guid: 82630eaab58732146a48d5e3b06887b6, type: 2}
+  - {fileID: 11400000, guid: 69f6723f3b027544297f61068bb1a4b7, type: 2}

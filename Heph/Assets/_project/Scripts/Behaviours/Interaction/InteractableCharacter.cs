@@ -6,8 +6,10 @@ namespace Heph.Scripts.Behaviours.Interaction
 {
     public class InteractableCharacter : Interactable
     {
-        [SerializeField] public string fighterID; 
+        [SerializeField] public string fighterID;
 
+        [SerializeField] public DEVIATION_CONTROL deviationRequested;
+        
         private GameManager _gameManager;
 
         private void Start()
@@ -18,6 +20,7 @@ namespace Heph.Scripts.Behaviours.Interaction
 
         public override void Interact()
         {
+            _gameManager.UpdateDeviation(deviationRequested);
             _gameManager.StartBattle(fighterID);
         }
     }

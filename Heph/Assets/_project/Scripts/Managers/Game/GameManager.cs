@@ -22,6 +22,8 @@ namespace Heph.Scripts.Managers.Game
 		[NonSerialized] private string currentEnemyFighter = "";
 
 		public StoryLibrary storylibrary;
+
+		public DEVIATION_CONTROL currentDeviationsActive = DEVIATION_CONTROL.NONE;
 		
 		private void Awake()
 		{
@@ -62,13 +64,18 @@ namespace Heph.Scripts.Managers.Game
 
 			var playerData = _characterData["player"];
 			var enemyData = _characterData[currentEnemyFighter];
-			battleSystem.InitBattle(playerData, enemyData);
+			battleSystem.InitBattle(playerData, enemyData, currentDeviationsActive);
 			CombatEventsManager.Instance.OnBattleStarted();
 		}
 
 		public void MoveToOverworld()
 		{
 			StartCoroutine(LevelManager.LoadLevelAsync("TestScene", true, null));
+		}
+
+		public void UpdateDeviation(DEVIATION_CONTROL control_val)
+		{
+			currentDeviationsActive = control_val;
 		}
 		
 

@@ -48,6 +48,7 @@ namespace Heph.Scripts.Combat.Card
             var cardToDraw = Deck.First();
             Hand.Add(cardToDraw);
             Deck.RemoveAt(0);
+            if (_fighterRef == null) return;
             CombatEventsManager.Instance.OnDrawAction(_fighterRef.isPlayerOwned, cardToDraw);
         }
 

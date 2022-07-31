@@ -74,8 +74,8 @@ namespace Heph.Scripts.Combat
             }
 
             Debug.Log("Finished resolving abilities in actions for combat round: " + BattleSystemRef.currentCombatRound);
-        
-            BattleSystemRef.MoveToNextRound();
+
+            BattleSystemRef.StartCoroutine(BattleSystemRef.MoveToNextRound());
         }
     }
 }

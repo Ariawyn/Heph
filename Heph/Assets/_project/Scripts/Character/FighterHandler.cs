@@ -38,9 +38,6 @@ namespace Heph.Scripts.Character
         // Desire here acting like action points per round of combat
         public Stat desire;
 
-        // Combat related vars
-        public int currentArenaSpaceIndex = 0;
-        
         // Is the fighter currently paying desire costs
         public bool isBusyWithDesire = false;
         private int _currentDesireActionIndex = 0;
@@ -59,10 +56,25 @@ namespace Heph.Scripts.Character
 
         #endregion
 
+        #region Other Variables
+
+        public BattleSystem battleSystemRef;
+        
+        // DEVIATIONS related vars
+        public DEVIATION_CONTROL currentDeviation = DEVIATION_CONTROL.NONE;
+        public DeckHandler flirtAttemptDeckHandler;
+        public List<CARD_TYPE> cardTypesPlayedInRound;
+        public bool metSocietalExpectations = false;
+        
+        
+        #endregion
+        
         #region Setup Functions
 
-        public void Setup(FighterData data, bool playerOwned)
+        public void Setup(FighterData data, bool playerOwned, DEVIATION_CONTROL currentDeviationType, BattleSystem battleSystem)
         {
+            battleSystemRef = battleSystem;
+            
             ID = data.ID;
             maximumHealth = new Stat(data.health);
             currentHealth = new Stat(data.health);
@@ -78,6 +90,16 @@ namespace Heph.Scripts.Character
             _deckHandler = new DeckHandler(this, tempDeckData);
             _deckHandler.ShuffleDeck();
 
+            currentDeviation = currentDeviationType;
+            if (currentDeviationType is DEVIATION_CONTROL.FIRST or DEVIATION_CONTROL.BOTH)
+            {
+                var tempFlirtDeckData = data.flirtDeck.ToList();
+                flirtAttemptDeckHandler = new DeckHandler(this, tempFlirtDeckData);
+                flirtAttemptDeckHandler.ShuffleDeck();
+            }
+
+            cardTypesPlayedInRound = new List<CARD_TYPE>();
+
             desireCardQueue = new CardQueue(desire.Value);
 
             isPlayerOwned = playerOwned;
@@ -85,6 +107,7 @@ namespace Heph.Scripts.Character
             {
                 AIController = new AIFighterController(this);
             }
+            
             
             CombatEventsManager.Instance.ActionTick += DesireActionTick;
         }
@@ -110,17 +133,34 @@ namespace Heph.Scripts.Character
             return result;
         }
 
+        public void DrawCards(int cardAmount)
+        {
+            _deckHandler.DrawCards(cardAmount);
+        }
+        
         public IEnumerator ExecuteTopCard(FighterHandler target)
         {
             // HANDLE GETTING AND ACTIVATING TOP CARD
-            if (target == null) yield break;
-            if (desireCardQueue == null) yield break;
-            if (desireCardQueue.Entries() < 1) yield break;
+            var shouldBreak = target == null || desireCardQueue == null || desireCardQueue.Entries() < 1;
+
+            if (shouldBreak)
+            {
+                CombatEventsManager.Instance.OnCardBeingResolvedAction(isPlayerOwned, null);
+                yield break;
+            }
             
-            // START AND WAIT FOR CARD EXECUTION
+            // GET CARD TO EXECUTE
             var cardToExecute = desireCardQueue.Dequeue();
+
+            // SEND MESSAGE TO COMBAT EVENTS WE ARE RESOLVING CARD
+            CombatEventsManager.Instance.OnCardBeingResolvedAction(isPlayerOwned, cardToExecute);
+
+            // START AND WAIT FOR CARD EXECUTION
             var cardExecutionCoroutine = StartCoroutine(cardToExecute.Activate(this, target));
             yield return cardExecutionCoroutine;
+            
+            // ADD CARD TYPE TO CARD TYPE PLAYED LIST
+            cardTypesPlayedInRound.Add(cardToExecute.type);
             
             // MAKE SURE TO DISCARD CARD
             _deckHandler.Discard.Add(cardToExecute);
@@ -135,6 +175,18 @@ namespace Heph.Scripts.Character
         public void AttemptToStartDialogue()
         {
             CombatEventsManager.Instance.OnFighterDialogueStartAction(isPlayerOwned);
+        }
+
+        public void AttemptToRespondToDialogueChoice(int choiceIndex, bool isDialogueCard)
+        {
+            CombatEventsManager.Instance.OnFighterDialogueChoiceAction(isPlayerOwned, choiceIndex, isDialogueCard);
+        }
+        
+        
+        public void AttemptToRespondToDraftChoice(BaseCard cardToAdd)
+        {
+            _deckHandler.Deck.Add(cardToAdd);
+            CombatEventsManager.Instance.OnFinishedDraftingCardAction(isPlayerOwned);
         }
         
         private void DesireActionTick()
@@ -174,7 +226,7 @@ namespace Heph.Scripts.Character
             if ((currentHealth.Value - totalDamageAmount) > 0)
             {
                 currentHealth.Value -= totalDamageAmount;
-                CombatEventsManager.Instance.OnFighterDamagedAction(isPlayerOwned, totalDamageAmount);
+                CombatEventsManager.Instance.OnFighterHealthDamagedAction(isPlayerOwned, totalDamageAmount);
             }
             else
             {
@@ -187,9 +239,33 @@ namespace Heph.Scripts.Character
         {
             Debug.Log("Handling start turn, drawing cards for desire value: " +  desire.Value);
 
+            cardTypesPlayedInRound.Clear();
+            
             StartCoroutine(_deckHandler.DrawCardsTimed(desire.Value, 0.2f, 1));
         }
 
+        public void CheckAndSetForSecondDeviationChanges()
+        {
+            if (currentDeviation is DEVIATION_CONTROL.NONE or DEVIATION_CONTROL.FIRST) return;
+            metSocietalExpectations = cardTypesPlayedInRound.Contains(battleSystemRef.currentExpectationCardType);
+            if (metSocietalExpectations)
+            {
+                Debug.Log("Fighter isPlayer: " + isPlayerOwned + " has met societal expectations!");
+                // ADD STAT MODIFIER TO THE CHARACTER FOR MEETING SOCIETAL EXPECTATIONS
+                var societalExpectationBuff = new StatModifier(5, StatModType.Flat, this);
+                physicalAttack.AddModifier(societalExpectationBuff);
+                magicalAttack.AddModifier(societalExpectationBuff);
+            }
+            else
+            {
+                Debug.Log("Fighter isPlayer: " + isPlayerOwned + " has not met societal expectations!");
+                if (!isPlayerOwned) return; // TODO: Have AI handle drafting if wanted,
+                                          // but for now we only allow player to draft cards for failing societal expectations...
+                battleSystemRef.isWaitingOnCardSelection = true;
+                CombatEventsManager.Instance.OnShouldDraftCardAction(isPlayerOwned);
+            }
+        }
+        
         public void HandleEndTurn()
         {
             // Remove all overhealth

@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Rush Punch
   description: Rush and punch
   artwork: {fileID: 0}
-  type: 4
+  type: 1
   desireCost: 1
   abilities:
   - {fileID: 11400000, guid: 0cb24c1273d00034a9f9c89e20d39f06, type: 2}

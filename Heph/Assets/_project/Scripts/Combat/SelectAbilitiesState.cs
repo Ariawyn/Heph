@@ -34,6 +34,7 @@ namespace Heph.Scripts.Combat
                 values.Remove(CARD_TYPE.FLIRT);
                 var currentRoundExpectation = values[BattleSystemRef.randomGen.Next(values.Count)];
                 BattleSystemRef.currentExpectationCardType = currentRoundExpectation;
+                CombatEventsManager.Instance.OnUpdatedSocietalExpectationAction(BattleSystemRef.currentExpectationCardType);
                 Debug.Log("Updated societal expectation of card type: " + BattleSystemRef.currentExpectationCardType);
             }
             

@@ -40,6 +40,9 @@ namespace Heph
         public GameObject playerCardSelectionOptionArea;
         public GameObject playerButtonSelectionOptionArea;
 
+        public GameObject societalExpectationArea;
+        public TextMeshProUGUI societalExpectationValue;
+
         public void Start()
         {
             CombatEventsManager.Instance.ActionTick += EndSelection;
@@ -54,6 +57,7 @@ namespace Heph
             CombatEventsManager.Instance.ToggleChoicesUI += TogglePlayerSelectionOptions;
 
             CombatEventsManager.Instance.ShouldDraftCardAction += StartDraftingUIActions;
+            CombatEventsManager.Instance.UpdatedSocietalExpectationAction += UpdateSocietalExpectationText;
         }
 
         private void StartDraftingUIActions(bool isPlayer)
@@ -174,6 +178,14 @@ namespace Heph
             enemyHealthBar.SetMaxHealth(battleSystemRef.enemy.maximumHealth.baseValue);
             playerShieldAmount.text = battleSystemRef.player.currentShield.Value.ToString();
             enemyShieldAmount.text = battleSystemRef.enemy.currentShield.Value.ToString();
+
+            societalExpectationArea.SetActive(
+                battleSystemRef.currentDeviationControl is DEVIATION_CONTROL.SECOND or DEVIATION_CONTROL.BOTH);
+        }
+
+        private void UpdateSocietalExpectationText(CARD_TYPE cardType)
+        {
+            societalExpectationValue.text = cardType.ToString();
         }
         
         private void AddCardToHand(bool isPlayer, BaseCard card)

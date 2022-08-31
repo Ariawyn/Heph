@@ -77,7 +77,13 @@ MonoBehaviour:
   - ID: testEnemy1
     data: {fileID: 11400000, guid: a11a326a63cb1604b91a5e60467738fa, type: 2}
   - ID: testEnemy2
+    data: {fileID: 11400000, guid: 0ab83dbf0c5af8443bf6bce7dd2805e1, type: 2}
+  - ID: testEnemy0
     data: {fileID: 11400000, guid: e9da3f84d0fa8e44cbc77eaee9c07f6c, type: 2}
+  - ID: testEnemy3
+    data: {fileID: 11400000, guid: 6f07bd8c6b600d646b566b2b556be8ca, type: 2}
+  storylibrary: {fileID: 0}
+  currentDeviationsActive: 0
 --- !u!114 &1987507780817471712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,3 +99,5 @@ MonoBehaviour:
   stories:
   - {fileID: 11400000, guid: bfd307d5baa339c4f86e0f030001d250, type: 2}
   - {fileID: 11400000, guid: d2998d8b30112ff46bffc20d175b673d, type: 2}
+  - {fileID: 11400000, guid: 0554f03bc20ef5f428ee595ecfec6749, type: 2}
+  - {fileID: 11400000, guid: e1bfb02f5e0695b45b19ac1fad223092, type: 2}

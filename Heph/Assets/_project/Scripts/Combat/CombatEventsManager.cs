@@ -139,5 +139,11 @@ namespace Heph.Scripts.Combat
         {
             FinishedDraftingCardAction?.Invoke(isPlayer);
         }
+
+        public event Action<CARD_TYPE> UpdatedSocietalExpectationAction;
+        public void OnUpdatedSocietalExpectationAction(CARD_TYPE cardTypeExpectation)
+        {
+            UpdatedSocietalExpectationAction?.Invoke(cardTypeExpectation);
+        }
     }
 }

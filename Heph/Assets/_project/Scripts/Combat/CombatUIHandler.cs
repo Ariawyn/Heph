@@ -24,10 +24,6 @@ namespace Heph
         public GameObject cardDraftButtonDisplayPrefab;
 
         public GameObject choiceButtonDisplayPrefab;
-        
-        public GameObject playerCardArea;
-        public GameObject playerCardDropArea;
-        public Button confirmButton;
 
         public HealthBar playerHealthBar;
         public HealthBar enemyHealthBar;
@@ -42,6 +38,24 @@ namespace Heph
 
         public GameObject societalExpectationArea;
         public TextMeshProUGUI societalExpectationValue;
+
+        #region Card Hand Zone Variables
+
+        public GameObject playerCardArea;
+        public GameObject playerCardDropArea;
+        public Button confirmButton;
+
+        public float totalHandCardTwistValue = 20f;
+        public float nudgeHandCardScalingValue = 100f;
+
+        private GridLayoutGroup _handLayoutGroup;
+        
+        public float cardSpacing = 100f;
+
+        public Vector3 cardStartPosition;
+        public RectTransform cardAreaTransform;
+        
+        #endregion
 
         public void Start()
         {
@@ -58,6 +72,13 @@ namespace Heph
 
             CombatEventsManager.Instance.ShouldDraftCardAction += StartDraftingUIActions;
             CombatEventsManager.Instance.UpdatedSocietalExpectationAction += UpdateSocietalExpectationText;
+
+            CombatEventsManager.Instance.ShouldUpdateHandFit += FitCardsInHand;
+            
+            cardAreaTransform = playerCardArea.GetComponent<RectTransform>();
+            cardStartPosition = playerCardArea.transform.position;
+            var sizeDelta = cardAreaTransform.sizeDelta;
+            cardStartPosition.x += sizeDelta.x;
         }
 
         private void StartDraftingUIActions(bool isPlayer)
@@ -195,6 +216,39 @@ namespace Heph
             var cardDisplayObj = Instantiate(cardDisplayPrefab, new Vector3(0, 0, 0), Quaternion.identity);
             cardDisplayObj.GetComponent<CardDisplay>().card = card;
             cardDisplayObj.transform.SetParent(playerCardArea.transform, false);
+            cardDisplayObj.transform.SetAsFirstSibling();
+            
+            FitCardsInHand();
+        }
+
+        private void FitCardsInHand()
+        {
+            var currentNumCards = playerCardArea.transform.childCount;
+            var twistPerCard = totalHandCardTwistValue / currentNumCards;
+            var currentCardIndex = 0;
+            
+            var middleCardIndex = Mathf.Floor(currentNumCards / 2f);
+            if (currentNumCards == 2) middleCardIndex = 0.5f;
+            
+            if (currentNumCards == 0) return;
+
+            foreach (Transform child in playerCardArea.transform)
+            {
+                child.rotation = Quaternion.identity;
+
+                var indexDistanceToMiddle = middleCardIndex - currentCardIndex;
+                var twistForCurrentCard = (indexDistanceToMiddle * -twistPerCard);
+                
+                var nudgeCardVal = Mathf.Abs(twistForCurrentCard);
+                nudgeCardVal *= nudgeHandCardScalingValue;
+
+                var startPosition = playerCardArea.transform.position;
+                child.position = new Vector3( cardStartPosition.x + (indexDistanceToMiddle * cardSpacing),  cardStartPosition.y);
+                child.Rotate(0f, 0f, twistForCurrentCard);
+                child.Translate(0f, -nudgeCardVal, 0f);
+                
+                currentCardIndex++;
+            }
         }
         
         public void ClearBoard()

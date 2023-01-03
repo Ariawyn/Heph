@@ -76,6 +76,7 @@ namespace Heph.Scripts.Behaviours
         {
             _startPosition = transform.position;
             _isDragging = true;
+            transform.rotation = Quaternion.identity;
         }
 
         public void EndDrag()
@@ -97,27 +98,29 @@ namespace Heph.Scripts.Behaviours
                     Debug.Log("Could not queue");
                     transform.position = _startPosition;
                 }
+                CombatEventsManager.Instance.OnShouldUpdateHandFitAction();
             }
             else if(_isOverHandZone)
             {
                 if (_hasChangedParent)
                 {
                     transform.SetParent(_handZone.transform, false);
-                    
                     _hasChangedParent = false;
                 }
                 transform.position = _startPosition;
+                CombatEventsManager.Instance.OnShouldUpdateHandFitAction();
             }
             else
             {
                 transform.position = _startPosition;
+                CombatEventsManager.Instance.OnShouldUpdateHandFitAction();
             }
         }
 
         public void OnPointerEnter(PointerEventData eventData)
         {
             
-            transform.localScale = new Vector3(1.75f, 1.75f, -10f);
+            transform.localScale = new Vector3(1.50f, 1.50f, -10f);
             canvas.sortingOrder = 10;
         }
 

@@ -145,5 +145,12 @@ namespace Heph.Scripts.Combat
         {
             UpdatedSocietalExpectationAction?.Invoke(cardTypeExpectation);
         }
+
+        public event Action ShouldUpdateHandFit;
+
+        public void OnShouldUpdateHandFitAction()
+        {
+            ShouldUpdateHandFit?.Invoke();
+        }
     }
 }

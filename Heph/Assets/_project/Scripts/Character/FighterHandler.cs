@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Heph.Scripts.Behaviours;
 using Heph.Scripts.Combat;
 using Heph.Scripts.Combat.Ability;
 using Heph.Scripts.Combat.Card;
@@ -223,6 +224,8 @@ namespace Heph.Scripts.Character
             var totalDamageAmount = currentDamageAmount- (physical ? physicalDefense.Value : magicalDefense.Value);
             if (totalDamageAmount <= 0) totalDamageAmount = 0;
             
+            SpawnDamagePopup(totalDamageAmount);
+            
             if ((currentHealth.Value - totalDamageAmount) > 0)
             {
                 currentHealth.Value -= totalDamageAmount;
@@ -235,6 +238,20 @@ namespace Heph.Scripts.Character
             }
         }
 
+        private void SpawnDamagePopup(int totalDamageAmount)
+        {
+            var spawnYOffset = Vector3.up * 10;
+            var spawnZOffset = Vector3.back * 10;
+            
+            var spawnPositon = isPlayerOwned
+                    ? battleSystemRef.Arena.playerGO.transform.position
+                    : battleSystemRef.Arena.enemyGO.transform.position;
+            
+            DamageIndicator indicator = Instantiate(battleSystemRef.damagePopup, spawnPositon + spawnYOffset + spawnZOffset, Quaternion.identity)
+                .GetComponent<DamageIndicator>();
+            indicator.SetDamageText(totalDamageAmount);
+        }
+        
         public void HandleStartTurn()
         {
             Debug.Log("Handling start turn, drawing cards for desire value: " +  desire.Value);

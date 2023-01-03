@@ -51,7 +51,7 @@ namespace Heph.Scripts.Managers.Game
 		public void StartBattle(string enemyFighterID)
 		{
 			currentEnemyFighter = enemyFighterID;
-			StartCoroutine(LevelManager.LoadLevelAsync("CombatTestScene", true, HandleLoadingBattle));
+			StartCoroutine(LevelManager.LoadLevelAsync("Combat", true, HandleLoadingBattle));
 		}
 
 		private void HandleLoadingBattle()
@@ -70,7 +70,7 @@ namespace Heph.Scripts.Managers.Game
 
 		public void MoveToOverworld()
 		{
-			StartCoroutine(LevelManager.LoadLevelAsync("TestScene", true, null));
+			StartCoroutine(LevelManager.LoadLevelAsync("Overworld", true, null));
 		}
 
 		public void UpdateDeviation(DEVIATION_CONTROL control_val)

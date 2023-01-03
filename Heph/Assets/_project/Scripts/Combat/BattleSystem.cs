@@ -41,6 +41,12 @@ namespace Heph.Scripts.Combat
         public DeckHandler societalFailurePotentialAdditionDeckHandler;
 
         public bool isWaitingOnCardSelection = false;
+        
+        #region Prefab References
+
+        public GameObject damagePopup;
+
+        #endregion
 
         public void InitBattle(FighterData playerData, FighterData enemyData, DEVIATION_CONTROL deviationControl)
         {

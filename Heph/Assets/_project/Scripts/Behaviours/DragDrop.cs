@@ -1,25 +1,32 @@
 using Heph.Scripts.Combat;
 using Heph.Scripts.Combat.Card;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 namespace Heph.Scripts.Behaviours
 {
-    public class DragDrop : MonoBehaviour
+    public class DragDrop : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         private BattleSystem _battleSystemRef;
         private bool _isDragging;
         private Vector2 _startPosition;
 
+        public Canvas canvas;
+        
         private bool _isOverDropZone;
         private GameObject _dropZone;
         private bool _isOverHandZone;
         private GameObject _handZone;
         private bool _hasChangedParent;
 
+        private Vector3 _cachedScale;
+        
         private void Start()
         {
+            _cachedScale = transform.localScale;
             _battleSystemRef = FindObjectOfType<BattleSystem>();
+            canvas.sortingOrder = 1;
         }
 
         // Update is called once per frame
@@ -105,6 +112,19 @@ namespace Heph.Scripts.Behaviours
             {
                 transform.position = _startPosition;
             }
+        }
+
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            
+            transform.localScale = new Vector3(1.75f, 1.75f, -10f);
+            canvas.sortingOrder = 10;
+        }
+
+        public void OnPointerExit(PointerEventData eventData)
+        {
+            transform.localScale = _cachedScale;
+            canvas.sortingOrder = 1;
         }
     }
 }

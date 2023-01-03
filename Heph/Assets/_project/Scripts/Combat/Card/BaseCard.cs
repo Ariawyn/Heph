@@ -17,7 +17,7 @@ namespace Heph.Scripts.Combat.Card
         public string description;
         public Sprite artwork;
         public CARD_TYPE type;
-        
+
         // Technically both abilities and cards have a desireCost but the cards desireCost is prioritized
         public int desireCost;
         public BaseAbility[] abilities;

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FistPunch
   m_EditorClassIdentifier: 
   name: Fist Punch
-  description: Basic punch. Simple. Easy.
+  description: Attack (Close)
   artwork: {fileID: 0}
   type: 1
   desireCost: 1

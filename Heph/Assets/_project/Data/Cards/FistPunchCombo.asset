@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FistPunchCombo
   m_EditorClassIdentifier: 
   name: Fist Punch Combo
-  description: The simple one two. Easy. Simple.
+  description: Attack (Close), Attack (Close)
   artwork: {fileID: 0}
   type: 1
   desireCost: 2

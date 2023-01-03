@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: JabAndDodge
   m_EditorClassIdentifier: 
   name: Jab'b'Dodge
-  description: Hit once, then retreat. Simples.
+  description: Attack (Close), Retreat 1
   artwork: {fileID: 0}
   type: 1
   desireCost: 2

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HastyRetreat
   m_EditorClassIdentifier: 
   name: Hasty Retreat
-  description: Jump backwards
+  description: Retreat 2
   artwork: {fileID: 0}
   type: 2
   desireCost: 1

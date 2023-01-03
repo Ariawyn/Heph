@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RushPunch
   m_EditorClassIdentifier: 
   name: Rush Punch
-  description: Rush and punch
+  description: Advance 1, Attack (Close)
   artwork: {fileID: 0}
   type: 1
   desireCost: 1

@@ -266,18 +266,24 @@ namespace Heph
         private void StartSelection()
         {
             Debug.Log("Selection should now be available.");
-            
+
             // Remove UI elements we dont need in select state
             playerResolvingCardDisplay.gameObject.SetActive(false);
             enemyResolvingCardDisplay.gameObject.SetActive(false);
             
             // Allow for the switching to resolve state through button confirmation
             confirmButton.gameObject.SetActive(true);
+            
+            // Add UI elements we need in select state
+            playerCardDropArea.gameObject.SetActive(true);
 
         }
 
         public void EndSelection()
         {
+            // Remove UI elements we dont need in select state
+            playerCardDropArea.gameObject.SetActive(false);
+            
             CombatEventsManager.Instance.OnSelectionConfirmButtonPressed();
             confirmButton.gameObject.SetActive(false);
         }

@@ -105,6 +105,9 @@ namespace Heph.Scripts.Behaviours
                 if (_hasChangedParent)
                 {
                     transform.SetParent(_handZone.transform, false);
+                    // TODO(Aria): This does not really work at the moment, the removing from queue, because for some reason it just doesnt??
+                    // TODO(Aria): maybe make like a unique id for each card in deck currently, so we know exactly which card to dequeue...
+                    //_battleSystemRef.player.RemoveCardFromQueue(card);
                     _hasChangedParent = false;
                 }
                 transform.position = _startPosition;

@@ -227,8 +227,8 @@ namespace Heph
             var twistPerCard = totalHandCardTwistValue / currentNumCards;
             var currentCardIndex = 0;
             
-            var middleCardIndex = Mathf.Floor(currentNumCards / 2f);
-            if (currentNumCards == 2) middleCardIndex = 0.5f;
+            var middleCardIndex = (currentNumCards % 2 != 0) ? Mathf.Floor(currentNumCards / 2f) : (currentNumCards / 2f);
+            //if (currentNumCards == 2) middleCardIndex = 0.5f;
             
             if (currentNumCards == 0) return;
 

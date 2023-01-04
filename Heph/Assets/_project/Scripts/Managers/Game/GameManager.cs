@@ -20,7 +20,8 @@ namespace Heph.Scripts.Managers.Game
 		private Dictionary<string, FighterData> _characterData;
 
 		[NonSerialized] private string currentEnemyFighter = "";
-
+		[NonSerialized] private bool hasSeenCombatTutorial = false;
+		
 		public StoryLibrary storylibrary;
 
 		public DEVIATION_CONTROL currentDeviationsActive = DEVIATION_CONTROL.NONE;
@@ -51,7 +52,19 @@ namespace Heph.Scripts.Managers.Game
 		public void StartBattle(string enemyFighterID)
 		{
 			currentEnemyFighter = enemyFighterID;
-			StartCoroutine(LevelManager.LoadLevelAsync("Combat", true, HandleLoadingBattle));
+			if (!hasSeenCombatTutorial)
+			{
+				_levelManager.LoadLevel("tutorialCombat");
+			}
+			else
+			{
+				StartCoroutine(LevelManager.LoadLevelAsync("Combat", true, HandleLoadingBattle));	
+			}
+		}
+
+		public void StartBattleFromTutorial()
+		{
+			StartCoroutine(LevelManager.LoadLevelAsync("Combat", true, HandleLoadingBattle));	
 		}
 
 		private void HandleLoadingBattle()

@@ -15,7 +15,7 @@ C:/Users/ariag/Documents/Heph/Heph/Heph
 -logFile
 Logs/AssetImportWorker7.log
 -srvPort
-58246
+58601
 Successfully changed project path to: C:/Users/ariag/Documents/Heph/Heph/Heph
 C:/Users/ariag/Documents/Heph/Heph/Heph
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/ariag/Documents/Heph/Heph/Heph
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 156.02 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 197.28 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.10f1 (ee872746220e)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.2.10f1/Editor/Data/Resources/UnitySubsystems
@@ -63,89 +63,146 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.2.10f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.2.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.2.10f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56892
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56800
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006680 seconds.
+Registered in 0.006373 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 163.48 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 164.16 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.883 seconds
+- Completed reload, in  0.827 seconds
 Domain Reload Profiling:
-	ReloadAssembly (883ms)
-		BeginReloadAssembly (99ms)
+	ReloadAssembly (827ms)
+		BeginReloadAssembly (74ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (675ms)
-			LoadAssemblies (96ms)
+		EndReloadAssembly (664ms)
+			LoadAssemblies (71ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (142ms)
+			SetupTypeCache (173ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (34ms)
-			SetupLoadedEditorAssemblies (426ms)
+			RebuildScriptCaches (39ms)
+			SetupLoadedEditorAssemblies (370ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (24ms)
+				InitializePlatformSupportModulesInManaged (20ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (164ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (174ms)
-				ProcessInitializeOnLoadMethodAttributes (62ms)
+				ProcessInitializeOnLoadAttributes (137ms)
+				ProcessInitializeOnLoadMethodAttributes (47ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.014476 seconds.
+Registered in 0.009779 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\ariag\Documents\Heph\Heph\Heph\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\ariag\Documents\Heph\Heph\Heph\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 182.09 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 133.15 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.549 seconds
+- Completed reload, in  2.075 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2550ms)
-		BeginReloadAssembly (145ms)
+	ReloadAssembly (2076ms)
+		BeginReloadAssembly (123ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (7ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (26ms)
-		EndReloadAssembly (2258ms)
-			LoadAssemblies (114ms)
+			CreateAndSetChildDomain (20ms)
+		EndReloadAssembly (1836ms)
+			LoadAssemblies (95ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (385ms)
+			SetupTypeCache (290ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (79ms)
-			SetupLoadedEditorAssemblies (1613ms)
+			RebuildScriptCaches (68ms)
+			SetupLoadedEditorAssemblies (1341ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (14ms)
+				InitializePlatformSupportModulesInManaged (12ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (182ms)
-				BeforeProcessingInitializeOnLoad (138ms)
-				ProcessInitializeOnLoadAttributes (1157ms)
-				ProcessInitializeOnLoadMethodAttributes (109ms)
-				AfterProcessingInitializeOnLoad (12ms)
+				RefreshPlugins (133ms)
+				BeforeProcessingInitializeOnLoad (114ms)
+				ProcessInitializeOnLoadAttributes (990ms)
+				ProcessInitializeOnLoadMethodAttributes (84ms)
+				AfterProcessingInitializeOnLoad (8ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 2.56 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 1.20 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 5544 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 50 unused Assets / (0.8 MB). Loaded Objects now: 5996.
-Memory consumption went from 222.2 MB to 221.5 MB.
-Total: 6.655200 ms (FindLiveObjects: 0.569300 ms CreateObjectMapping: 0.284100 ms MarkObjects: 5.401400 ms  DeleteObjects: 0.398500 ms)
+Unloading 50 unused Assets / (0.8 MB). Loaded Objects now: 5997.
+Memory consumption went from 223.0 MB to 222.3 MB.
+Total: 4.758000 ms (FindLiveObjects: 0.443500 ms CreateObjectMapping: 0.140900 ms MarkObjects: 3.845200 ms  DeleteObjects: 0.326900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011543 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ariag\Documents\Heph\Heph\Heph\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ariag\Documents\Heph\Heph\Heph\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.70 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.650 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1651ms)
+		BeginReloadAssembly (157ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (51ms)
+		EndReloadAssembly (1360ms)
+			LoadAssemblies (106ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (367ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (62ms)
+			SetupLoadedEditorAssemblies (743ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (14ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (111ms)
+				ProcessInitializeOnLoadAttributes (515ms)
+				ProcessInitializeOnLoadMethodAttributes (87ms)
+				AfterProcessingInitializeOnLoad (12ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (18ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.50 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5410 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 31 unused Assets / (0.7 MB). Loaded Objects now: 6012.
+Memory consumption went from 216.2 MB to 215.5 MB.
+Total: 6.853200 ms (FindLiveObjects: 0.566100 ms CreateObjectMapping: 0.342600 ms MarkObjects: 5.618600 ms  DeleteObjects: 0.324300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -160,1307 +217,793 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 279311.863189 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/roadDirt_side.dae
-  artifactKey: Guid(52ca3dd876b19bb42b79b6d36aacda49) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/roadDirt_side.dae using Guid(52ca3dd876b19bb42b79b6d36aacda49) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'c779c5151e2b0e3f5a3e5baf8da2446f') in 0.203703 seconds 
+  Time since last request: 790545.534009 seconds.
+  path: Assets/AllSkyFree/Epic_BlueSunset/Epic_BlueSunset_Cam_1_Back-Z.png
+  artifactKey: Guid(cbdb0c81375e549b1bae3506c1863a68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AllSkyFree/Epic_BlueSunset/Epic_BlueSunset_Cam_1_Back-Z.png using Guid(cbdb0c81375e549b1bae3506c1863a68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bf3460c148dc77c59c10347d5c897f9') in 0.104534 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/roadAsphalt_damaged.dae
-  artifactKey: Guid(138b55d7c771c9343966595246694d8b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/roadAsphalt_damaged.dae using Guid(138b55d7c771c9343966595246694d8b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '11fb664e15b478c881f8598aad198e87') in 0.014398 seconds 
+  Time since last request: 0.000041 seconds.
+  path: Assets/AllSkyFree/Epic_BlueSunset/Epic_BlueSunset_Cam_3_Right-X.png
+  artifactKey: Guid(04869052f46ba428caebe862513e3b5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AllSkyFree/Epic_BlueSunset/Epic_BlueSunset_Cam_3_Right-X.png using Guid(04869052f46ba428caebe862513e3b5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9161b8a8b78921bc3c62a20359f154d6') in 0.026620 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/_project/ImportedAssets/Retro Medieval Kit/Models/STL format/wallFortifiedPaint_gate.stl
-  artifactKey: Guid(7665309a95b1e0c45a7a7c858ca3cbd6) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Medieval Kit/Models/STL format/wallFortifiedPaint_gate.stl using Guid(7665309a95b1e0c45a7a7c858ca3cbd6) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'a97deddd17e8fb7c2b9abd7965271cc9') in 0.012536 seconds 
+  Time since last request: 0.000041 seconds.
+  path: Assets/AllSkyFree/Epic_BlueSunset/Epic_BlueSunset_Cam_5_Down-Y.png
+  artifactKey: Guid(3e1c1042c332d4444bfe47799ff3e0d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AllSkyFree/Epic_BlueSunset/Epic_BlueSunset_Cam_5_Down-Y.png using Guid(3e1c1042c332d4444bfe47799ff3e0d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3394ab5a86a85e08181c7fab4ac762c1') in 0.024096 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/detailLight_single.dae
-  artifactKey: Guid(6ef58dbdfd1222541b53807b1f4dac9e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/detailLight_single.dae using Guid(6ef58dbdfd1222541b53807b1f4dac9e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '1eb807a819379377ac742e876bdc9830') in 0.026227 seconds 
+  Time since last request: 0.197001 seconds.
+  path: Assets/AllSkyFree/Epic_GloriousPink/Epic_GloriousPink.mat
+  artifactKey: Guid(8b7dd0809c7c6498789fa32a61eaa6cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AllSkyFree/Epic_GloriousPink/Epic_GloriousPink.mat using Guid(8b7dd0809c7c6498789fa32a61eaa6cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90bd19f5bbabae3729e03d87bc70a942') in 0.542265 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/wallA.dae
-  artifactKey: Guid(87e9bbe8e69a97a448902e262542eda3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/wallA.dae using Guid(87e9bbe8e69a97a448902e262542eda3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'a732d011328379866a948539cb25092f') in 0.012646 seconds 
+  Time since last request: 0.000043 seconds.
+  path: Assets/AllSkyFree/Night MoonBurst/Night Moon Burst_Cam_0_Front+Z.png
+  artifactKey: Guid(6faf329ad7f5a4920bd3e23e4b000057) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AllSkyFree/Night MoonBurst/Night Moon Burst_Cam_0_Front+Z.png using Guid(6faf329ad7f5a4920bd3e23e4b000057) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6cc2d25ecc09d43f96c6b0bace85f1b') in 0.029770 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000038 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/roadDirt_pavement.dae
-  artifactKey: Guid(2074cb18f8127ea42b0c3d69a27dad1e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/roadDirt_pavement.dae using Guid(2074cb18f8127ea42b0c3d69a27dad1e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '9d3ec2737c4bfca40503d523dbf7b941') in 0.012580 seconds 
+  path: Assets/AllSkyFree/Night MoonBurst/Night Moon Burst_Cam_4_Up+Y.png
+  artifactKey: Guid(544d3cf87e24a464fa433d08257479d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AllSkyFree/Night MoonBurst/Night Moon Burst_Cam_4_Up+Y.png using Guid(544d3cf87e24a464fa433d08257479d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '137d662bd8a95ae679e66742e2fe5aac') in 0.023374 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000030 seconds.
-  path: Assets/_project/ImportedAssets/Retro Medieval Kit/Models/STL format/tower_edge.stl
-  artifactKey: Guid(2c3ae72643ac066408bed35f188a5ebc) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Medieval Kit/Models/STL format/tower_edge.stl using Guid(2c3ae72643ac066408bed35f188a5ebc) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '6e2d60d84b326a8e78392dbf6cb050a1') in 0.008616 seconds 
+  path: Assets/AllSkyFree/Night MoonBurst/Night Moon Burst_Cam_1_Back-Z.png
+  artifactKey: Guid(88710d7f2a0fa4bfeacbf7045be893fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AllSkyFree/Night MoonBurst/Night Moon Burst_Cam_1_Back-Z.png using Guid(88710d7f2a0fa4bfeacbf7045be893fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd07ad03e2018c51bedb98ab02c42bc38') in 0.023130 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000073 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/roofMetal_poles.dae
-  artifactKey: Guid(f6cd24372b4d4ea4e90aa5250f00639d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/roofMetal_poles.dae using Guid(f6cd24372b4d4ea4e90aa5250f00639d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '1ca81cabd0ffb15a3c92dde08d571588') in 0.012892 seconds 
+  Time since last request: 10.157107 seconds.
+  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/wallA_window.fbx
+  artifactKey: Guid(8ed55373ef894cc41a22286054ba31e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/wallA_window.fbx using Guid(8ed55373ef894cc41a22286054ba31e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bc0793356d5d7841f04b082e5d5041b') in 0.161505 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/detailBarrier_typeA.dae
-  artifactKey: Guid(7af61df2cd8262c4c8385cfe00a8e3bb) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/detailBarrier_typeA.dae using Guid(7af61df2cd8262c4c8385cfe00a8e3bb) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '3b96a029ee3de7d0a68e84ca4caf594c') in 0.012606 seconds 
+  Time since last request: 0.000038 seconds.
+  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/windowWide_typeB.fbx
+  artifactKey: Guid(8b81e524c71234141b8213d534ec0786) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/windowWide_typeB.fbx using Guid(8b81e524c71234141b8213d534ec0786) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '555b248e7f962c8305438c2368abe068') in 0.072139 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/_project/ImportedAssets/Retro Medieval Kit/Models/STL format/wallFortified_gateHalf.stl
-  artifactKey: Guid(d9000f4196db4e4439c28974447444c7) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Medieval Kit/Models/STL format/wallFortified_gateHalf.stl using Guid(d9000f4196db4e4439c28974447444c7) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'cdb1bd4c27ac6a84f9fd82b68de4649c') in 0.008969 seconds 
+  Time since last request: 1.297879 seconds.
+  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/wallA_window.dae
+  artifactKey: Guid(7fb1b662f0165e4408802f97d1692f03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/wallA_window.dae using Guid(7fb1b662f0165e4408802f97d1692f03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5008bfcb03b27eedc6ccbdf177c1d94') in 0.111961 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/_project/ImportedAssets/Retro Medieval Kit/Models/STL format/structure_wall.stl
-  artifactKey: Guid(49cdcadc8fdbf544e990ec28846ac4af) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Medieval Kit/Models/STL format/structure_wall.stl using Guid(49cdcadc8fdbf544e990ec28846ac4af) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '48451693f6e88f7ac3bbcf8097afc24e') in 0.009797 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/_project/ImportedAssets/Retro Medieval Kit/Models/OBJ format/tower.obj
-  artifactKey: Guid(fd7d29082915e9845b525243ede7a9d8) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Medieval Kit/Models/OBJ format/tower.obj using Guid(fd7d29082915e9845b525243ede7a9d8) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '96a84e6a631f93b4400e2fcb83559dd3') in 0.014511 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000042 seconds.
-  path: Assets/_project/ImportedAssets/Retro Medieval Kit/Models/DAE format/wallFortified_half.dae
-  artifactKey: Guid(8c9e7ed9045d80c44907ebbad1a67941) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Medieval Kit/Models/DAE format/wallFortified_half.dae using Guid(8c9e7ed9045d80c44907ebbad1a67941) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '73fdaf9ef4dbbd29b73a14babfaa3f4d') in 0.010565 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/_project/ImportedAssets/Retro Medieval Kit/Models/OBJ format/wallPaint_flat.mtl
-  artifactKey: Guid(db29692ee09f9784e934dfeff4d4d3a5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Medieval Kit/Models/OBJ format/wallPaint_flat.mtl using Guid(db29692ee09f9784e934dfeff4d4d3a5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'e0d46a2d46598bc3f02a592d5e334eae') in 0.009191 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/_project/ImportedAssets/Retro Medieval Kit/Models/OBJ format/roof_edge.obj
-  artifactKey: Guid(fc03e5ef1923dd042ac8c131476cf207) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Medieval Kit/Models/OBJ format/roof_edge.obj using Guid(fc03e5ef1923dd042ac8c131476cf207) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '955bfff4bad657ababcab5b4daa8b17d') in 0.012786 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/_project/ImportedAssets/Retro Medieval Kit/Models/STL format/floor_flat.stl
-  artifactKey: Guid(329d2334ed18f5046a39ad8b6559a22b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Medieval Kit/Models/STL format/floor_flat.stl using Guid(329d2334ed18f5046a39ad8b6559a22b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '88a04c65557bb4b163963cea7645d6dd') in 0.010578 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/_project/ImportedAssets/Retro Medieval Kit/Models/GLTF format/columnPaint_damaged.glb
-  artifactKey: Guid(b45db82d5b9c79f4ba9679e172bb7291) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Medieval Kit/Models/GLTF format/columnPaint_damaged.glb using Guid(b45db82d5b9c79f4ba9679e172bb7291) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '377e365f1a26afe34a14fd726e9bedf5') in 0.010601 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/roofMetal_typeB.fbx
-  artifactKey: Guid(b85b4feaf07a4754787d55630805a9a8) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/roofMetal_typeB.fbx using Guid(b85b4feaf07a4754787d55630805a9a8) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'af7d99fe79608aef82df65feb32375b3') in 0.011170 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/detailBarrierStrong_damaged.fbx
-  artifactKey: Guid(5bc920b65bcacaa4fb3631eb225eeff0) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/detailBarrierStrong_damaged.fbx using Guid(5bc920b65bcacaa4fb3631eb225eeff0) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '1d6bd44daa002959b05cffb787820cd5') in 0.010941 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/roadDirt_cornerOuter.fbx
-  artifactKey: Guid(0f882a831bc63e94eb6d1b53851c127b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/roadDirt_cornerOuter.fbx using Guid(0f882a831bc63e94eb6d1b53851c127b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '1a805c539d1d0855b75521a6658c4db5') in 0.009604 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/wallA_roof.dae
-  artifactKey: Guid(158a800bfa9a80645b6e7f3f117f0a91) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/wallA_roof.dae using Guid(158a800bfa9a80645b6e7f3f117f0a91) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '19df52c43f83f951d3f30d9c9e117009') in 0.014020 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
+  Time since last request: 0.262635 seconds.
   path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/wallB_flat.dae
-  artifactKey: Guid(fae9a43633cb7d94da8875f40d76823e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/wallB_flat.dae using Guid(fae9a43633cb7d94da8875f40d76823e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'ecd0fda4d954ed6135628305c1429ec0') in 0.013541 seconds 
+  artifactKey: Guid(fae9a43633cb7d94da8875f40d76823e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/wallB_flat.dae using Guid(fae9a43633cb7d94da8875f40d76823e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3b63f683324f555c953bae0a2256fdb') in 0.045692 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/wallB_door.dae
-  artifactKey: Guid(7d7770be7ad83d146bb68c806c40b017) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/wallB_door.dae using Guid(7d7770be7ad83d146bb68c806c40b017) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'e0a7dbb4654f0d4028831286b24e2ed7') in 0.014672 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000043 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/detailCables_typeB.fbx
-  artifactKey: Guid(c8e6f0fc2d9304b48984df3de6c6bf64) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/detailCables_typeB.fbx using Guid(c8e6f0fc2d9304b48984df3de6c6bf64) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '7e1e6a81f0a524fb6ac2bd9cd92609f2') in 0.012150 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/wallB_roofDetailed.dae
-  artifactKey: Guid(16b833f4b0158af4db0ecf02575e7799) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/wallB_roofDetailed.dae using Guid(16b833f4b0158af4db0ecf02575e7799) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '39170cb7c0400034358ce86f18cb83ea') in 0.013339 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/wall_typeB.dae
-  artifactKey: Guid(525d6124c5c2a31418cf09997fe274a5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/wall_typeB.dae using Guid(525d6124c5c2a31418cf09997fe274a5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '7df07da08910a6c1026567fa4937fe2d') in 0.013135 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/detailLight_double.fbx
-  artifactKey: Guid(bfcc2849be3575242a22609a52567308) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/detailLight_double.fbx using Guid(bfcc2849be3575242a22609a52567308) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '12236a5018e87805d7eea9d96145d7d4') in 0.011087 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/detailAwning_small.fbx
-  artifactKey: Guid(eea83f34fd736c74ca398d0c6aabab8a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/detailAwning_small.fbx using Guid(eea83f34fd736c74ca398d0c6aabab8a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'fe2c774f809ed99a6da0c57d59a11d5e') in 0.010526 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/detailLight_single.fbx
-  artifactKey: Guid(2f6aed34416ad014897c88cd2762fc03) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/detailLight_single.fbx using Guid(2f6aed34416ad014897c88cd2762fc03) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'eca542ccd9fbdf183145b2ffc68c2f63') in 0.024697 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/wall_typeA.dae
-  artifactKey: Guid(2a54d4f82d673664dbbe4bc6373f9186) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/wall_typeA.dae using Guid(2a54d4f82d673664dbbe4bc6373f9186) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'fae17f76bd923b1193eabf4217f6cddf') in 0.013218 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/wallBroken_typeB.dae
-  artifactKey: Guid(83ffaa336dc36b744af8aad6f02b4c75) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/wallBroken_typeB.dae using Guid(83ffaa336dc36b744af8aad6f02b4c75) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'f45cfb38485a493b4c989cf029042773') in 0.015398 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/roadAsphalt_side.fbx
-  artifactKey: Guid(f93e6ff3d217ebf4baa599d229680e6a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/roadAsphalt_side.fbx using Guid(f93e6ff3d217ebf4baa599d229680e6a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '49171a394cf209e2a1d14fe9164e210d') in 0.016268 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/detailBricks_typeB.fbx
-  artifactKey: Guid(0c0aaa71db7de9b4780302b3790e7586) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/detailBricks_typeB.fbx using Guid(0c0aaa71db7de9b4780302b3790e7586) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'c4547f946fb04d246aff7534edcced3c') in 0.012218 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/tree_shrub.fbx
-  artifactKey: Guid(d261d9d4fbf863e4b9b76f287c322d27) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/tree_shrub.fbx using Guid(d261d9d4fbf863e4b9b76f287c322d27) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '9c8d54f05dc030152df364e8edbd5277') in 0.013358 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/wallA_flatWindow.dae
-  artifactKey: Guid(eaf61a53fe388d64a9d6352a1a7e57a6) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/wallA_flatWindow.dae using Guid(eaf61a53fe388d64a9d6352a1a7e57a6) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '5ab436b95327304b9968a4aa9ccbd572') in 0.013614 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/wallB.dae
-  artifactKey: Guid(08e102bbb7db5c545b4514e01ed15fd1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/wallB.dae using Guid(08e102bbb7db5c545b4514e01ed15fd1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'a27e1e86b375e69231f3b7c0469e7947') in 0.013252 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/scaffolding_structure.fbx
-  artifactKey: Guid(6386e40e6a22b1c418d07326b4f68998) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/scaffolding_structure.fbx using Guid(6386e40e6a22b1c418d07326b4f68998) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '04146af7307cfc9a4cf47f4a19a51b2f') in 0.011252 seconds 
+  Time since last request: 0.388518 seconds.
+  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/wallB.fbx
+  artifactKey: Guid(982d6c5bcd7fa354aa96bce49f35dd92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/wallB.fbx using Guid(982d6c5bcd7fa354aa96bce49f35dd92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4375b7e2d39766497a5b0c6f6a0579a') in 0.053420 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000032 seconds.
-  path: Assets/_project/ImportedAssets/Retro Medieval Kit/Models/FBX format/battlement.fbx
-  artifactKey: Guid(c2a47ae0df584394babaa58311e0f8fe) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Medieval Kit/Models/FBX format/battlement.fbx using Guid(c2a47ae0df584394babaa58311e0f8fe) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '7c9489dd5eb7095695aa92a6ce92b957') in 0.012275 seconds 
+  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/roofMetal_poles.fbx
+  artifactKey: Guid(8c284e2a9cb28ad4880950137adae7f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/roofMetal_poles.fbx using Guid(8c284e2a9cb28ad4880950137adae7f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8e7c35af4fd266482e099876eb90677') in 0.060235 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/_project/ImportedAssets/Retro Medieval Kit/Models/OBJ format/roof_corner.obj
-  artifactKey: Guid(5c7243f3ec6a7df41b1fd975aa8357f4) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Medieval Kit/Models/OBJ format/roof_corner.obj using Guid(5c7243f3ec6a7df41b1fd975aa8357f4) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'b161b38ef8f0f7f1f8609eafef5e4131') in 0.011757 seconds 
+  Time since last request: 0.000044 seconds.
+  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/wallB_flatGarage.fbx
+  artifactKey: Guid(9ebbf28b6572f754ca05910f8c357695) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/wallB_flatGarage.fbx using Guid(9ebbf28b6572f754ca05910f8c357695) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0505faf792f69eca1c9f6dab1b9b0e10') in 0.064939 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/balconyLadder_bottom.fbx
-  artifactKey: Guid(bf2dd10b97c847948a7d8098505c9ff4) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/balconyLadder_bottom.fbx using Guid(bf2dd10b97c847948a7d8098505c9ff4) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '9e5847ba827efb571ec72335de5c54d5') in 0.013774 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/_project/ImportedAssets/Retro Medieval Kit/Models/OBJ format/floor.obj
-  artifactKey: Guid(53c127b86e647594c8eb1288da7d42cb) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Medieval Kit/Models/OBJ format/floor.obj using Guid(53c127b86e647594c8eb1288da7d42cb) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '86f3d4f9c324cd7fd3b6cfe6c888551c') in 0.013353 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/_project/ImportedAssets/Retro Medieval Kit/Models/OBJ format/overhang_round.obj
-  artifactKey: Guid(82e71c64f7a2a864bb9b94c343ddaa24) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Medieval Kit/Models/OBJ format/overhang_round.obj using Guid(82e71c64f7a2a864bb9b94c343ddaa24) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'e2e35c6626cc3d1a13152032a824df50') in 0.013920 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/detailBarrierStrong_typeA.fbx
-  artifactKey: Guid(7e827e4f725b5714aa8fdc695e48c930) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/detailBarrierStrong_typeA.fbx using Guid(7e827e4f725b5714aa8fdc695e48c930) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '9aa8f53068ea7e8f21b2b52ff257a769') in 0.012502 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Assets/_project/ImportedAssets/Retro Medieval Kit/Models/OBJ format/wallPaint_detail.mtl
-  artifactKey: Guid(10cb0239a015af045b1c098e007f69ca) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Medieval Kit/Models/OBJ format/wallPaint_detail.mtl using Guid(10cb0239a015af045b1c098e007f69ca) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'e45dcd9a180d75c25fbe898a4216b3fb') in 0.009640 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/_project/ImportedAssets/Retro Medieval Kit/Models/GLTF format/wallFortified_half.glb
-  artifactKey: Guid(9e7014036d17d8e4eab215e1a8dfb8cb) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Medieval Kit/Models/GLTF format/wallFortified_half.glb using Guid(9e7014036d17d8e4eab215e1a8dfb8cb) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'c36756645b6f46e98a79542d67419418') in 0.009761 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/detailDumpster_closed.glb
-  artifactKey: Guid(a61c0d93dd6091e418873924821a2183) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/detailDumpster_closed.glb using Guid(a61c0d93dd6091e418873924821a2183) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'd3b3597e2b7445ec8e6502143983516c') in 0.011586 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/grass.glb
-  artifactKey: Guid(67f085f42efc4ae408d51c65a7b5c059) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/grass.glb using Guid(67f085f42efc4ae408d51c65a7b5c059) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'cda524e550db108dcd51b564dab6e4fc') in 0.010374 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/tree_small.fbx
-  artifactKey: Guid(09fd3889f64bf9d49902bf552176ef8a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/tree_small.fbx using Guid(09fd3889f64bf9d49902bf552176ef8a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'd3f365be4caeb0734c19d24579b959d0') in 0.012842 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/wallB_roofSlantDetailed.fbx
-  artifactKey: Guid(6d79f7ba5948cc44482d20e8164dadbc) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/wallB_roofSlantDetailed.fbx using Guid(6d79f7ba5948cc44482d20e8164dadbc) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'cfb2bd1f782ea15a4edf16703d3d0b16') in 0.014221 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/wallA_cornerPainted.fbx
-  artifactKey: Guid(76f3930ce60d8474583040ef4eb60926) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/wallA_cornerPainted.fbx using Guid(76f3930ce60d8474583040ef4eb60926) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'e848b7d79fc05d0d8ba8ac221477363e') in 0.014497 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/wallA_flat.fbx
-  artifactKey: Guid(4d3cdec8001e010469aa4d71892732e5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/wallA_flat.fbx using Guid(4d3cdec8001e010469aa4d71892732e5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '6fd078d0c12ee2435e3a08008441b2dd') in 0.013000 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/truck_green.glb
-  artifactKey: Guid(fae4a3969727b2948b6bd314c3ba58af) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/truck_green.glb using Guid(fae4a3969727b2948b6bd314c3ba58af) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '98234e9126262dddaeec610d2dfcfc05') in 0.010915 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/roadDirt_corner.glb
-  artifactKey: Guid(1f3f85ab553b008409b208ee14d3af22) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/roadDirt_corner.glb using Guid(1f3f85ab553b008409b208ee14d3af22) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'c5882369e68068ba6cbeaeb12fef3ac2') in 0.010601 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/roadAsphalt_center.glb
-  artifactKey: Guid(26381797bbe6ddf41989261d92b0591e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/roadAsphalt_center.glb using Guid(26381797bbe6ddf41989261d92b0591e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'edabd820e6a7ce7d29661bb193b84a3a') in 0.010876 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/roofMetal_typeB.glb
-  artifactKey: Guid(65d994068f6778e44803d54b97c59340) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/roofMetal_typeB.glb using Guid(65d994068f6778e44803d54b97c59340) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '6db71d3d186046b61b1c514eaeabca70') in 0.011531 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/wallA_low.fbx
-  artifactKey: Guid(6ebfce5f6279f714183d67fcb1adb1de) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/wallA_low.fbx using Guid(6ebfce5f6279f714183d67fcb1adb1de) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '83490384a43e1e2d49dba92c9da05802') in 0.028008 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/detailBarrier_typeA.glb
-  artifactKey: Guid(b7ca3ce740a47e248b507ea340d682d2) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/detailBarrier_typeA.glb using Guid(b7ca3ce740a47e248b507ea340d682d2) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'd45994a7b7ef6208cbc41d67e7dc82d2') in 0.010603 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/roofMetal_poles.glb
-  artifactKey: Guid(8c54bcd24cdecff46aa677865538c6f6) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/roofMetal_poles.glb using Guid(8c54bcd24cdecff46aa677865538c6f6) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '7b75afc26f3dd9ccb7f683092d0a464f') in 0.011930 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/roadAsphalt_side.glb
-  artifactKey: Guid(db3cd2ec02cfe2c4cb7c758dd7b909c4) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/roadAsphalt_side.glb using Guid(db3cd2ec02cfe2c4cb7c758dd7b909c4) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '8eaf5266c143d930143adee28ea29516') in 0.009893 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/roadDirt_straight.glb
-  artifactKey: Guid(8d8ef79b2a1df6444b668233f197b1e9) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/roadDirt_straight.glb using Guid(8d8ef79b2a1df6444b668233f197b1e9) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '1ae3683f7fc0b6847e242a287596b847') in 0.009837 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/wallA_garage.fbx
-  artifactKey: Guid(d58c975aea636c84fb9edb61466d5770) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/wallA_garage.fbx using Guid(d58c975aea636c84fb9edb61466d5770) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '0d302e271af32f0e69cc40148b80ffad') in 0.015189 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/detailAwning_wide.glb
-  artifactKey: Guid(cbcf52c377bbbd24e9cabe5717501155) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/detailAwning_wide.glb using Guid(cbcf52c377bbbd24e9cabe5717501155) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'bb6c34723c0f7e8815c555b09d6b93ea') in 0.010164 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/detailCables_typeB.glb
-  artifactKey: Guid(55fb5d01647472a45922c5ad356c1ddb) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/detailCables_typeB.glb using Guid(55fb5d01647472a45922c5ad356c1ddb) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '68b7c5d577a6f6faae031a8ac7f9aaf3') in 0.012157 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/wallB_roofDetailed.fbx
-  artifactKey: Guid(e335baa5cd1c59a449227982645e7b6e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/wallB_roofDetailed.fbx using Guid(e335baa5cd1c59a449227982645e7b6e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'ab49f97e35ce552cd99a77cd7f15961e') in 0.012216 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/truck_grey.fbx
-  artifactKey: Guid(5f5270513c1d2134eb989beb73511d82) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/truck_grey.fbx using Guid(5f5270513c1d2134eb989beb73511d82) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'edd4702a936a82eededdf9e91bef2c22') in 0.011506 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/roadDirt_cornerInner.glb
-  artifactKey: Guid(21f17503848ab1e4aabdba96fea6e7b8) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/roadDirt_cornerInner.glb using Guid(21f17503848ab1e4aabdba96fea6e7b8) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '03ccc119a24a1653160edf3d06966e9f') in 0.009008 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000088 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/wallA_detailPainted.fbx
-  artifactKey: Guid(1e0f73889207aa449b5b89c10ceb52fc) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/wallA_detailPainted.fbx using Guid(1e0f73889207aa449b5b89c10ceb52fc) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '3d29b1de6cb4248166aba012df27ce7d') in 0.011645 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/wallA_corner.glb
-  artifactKey: Guid(f8fa0efc8ea786046a78d20c36cc1699) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/wallA_corner.glb using Guid(f8fa0efc8ea786046a78d20c36cc1699) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'd4a9ed2ed10245141294737fbb6474f0') in 0.010020 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/wallA_lowPainted.glb
-  artifactKey: Guid(16329d43d8d326f4eb706a2a338f12b4) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/wallA_lowPainted.glb using Guid(16329d43d8d326f4eb706a2a338f12b4) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '779b22b8ac00740dd7542bb2fda6a744') in 0.010548 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/wallA_roofSlant.fbx
-  artifactKey: Guid(e7c2471bb55e5c24b89d5ba70524ecab) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/wallA_roofSlant.fbx using Guid(e7c2471bb55e5c24b89d5ba70524ecab) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '42c400fdadf3ee04408f0e45fa635794') in 0.010497 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/wallA_roofSlantDetailed.glb
-  artifactKey: Guid(8c632081562f1074c80aedfae27313b5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/wallA_roofSlantDetailed.glb using Guid(8c632081562f1074c80aedfae27313b5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '8fe65406888502678a922e93ce782c1a') in 0.010298 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/detailCables_typeB.mtl
-  artifactKey: Guid(e7bd141f80d2cd44caf2abce5a73eb27) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/detailCables_typeB.mtl using Guid(e7bd141f80d2cd44caf2abce5a73eb27) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'a7940dd99d1ff1bbc31da783e93ed04b') in 0.010120 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000109 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/detailAwning_small.obj
-  artifactKey: Guid(b791dc839afca2742a5b2b0da3541208) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/detailAwning_small.obj using Guid(b791dc839afca2742a5b2b0da3541208) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '8bfd91873af5de186f061075fc40d10f') in 0.011622 seconds 
+  Time since last request: 0.138870 seconds.
+  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/wallB_open.fbx
+  artifactKey: Guid(747c6e66cbd067c4da490b8c50e510de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/wallB_open.fbx using Guid(747c6e66cbd067c4da490b8c50e510de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41481e4c3fc61263c131e76a92b6861b') in 0.132834 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000038 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/roadAsphalt_damaged.mtl
-  artifactKey: Guid(8dbccbe60331c274882e85059373e78d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/roadAsphalt_damaged.mtl using Guid(8dbccbe60331c274882e85059373e78d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '239d58968e7b9a81f8cd207b88301f51') in 0.010706 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/wallSteps_typeB.glb
-  artifactKey: Guid(3acbb806c4f48a248b693dbfab4d1c34) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/wallSteps_typeB.glb using Guid(3acbb806c4f48a248b693dbfab4d1c34) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '784c992b14787cc4e85000b4931940ec') in 0.009064 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/wall_typeA.glb
-  artifactKey: Guid(182f98ba2f7ea9e498c01933d965d42c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/wall_typeA.glb using Guid(182f98ba2f7ea9e498c01933d965d42c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '0d5bdf0e3a09ea7fac88c0958d6af9f2') in 0.011095 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/detailBricks_typeA.mtl
-  artifactKey: Guid(e9da7399f3a2d5448a55e6be6236d752) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/detailBricks_typeA.mtl using Guid(e9da7399f3a2d5448a55e6be6236d752) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '25e7ca146e84fcf7dace7d8e33a3c9cf') in 0.011118 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/detailAwning_wide.mtl
-  artifactKey: Guid(39e54536cbdb94a4f8b3e9d89c50590a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/detailAwning_wide.mtl using Guid(39e54536cbdb94a4f8b3e9d89c50590a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'de6a7b044fb7c81b8fb2fe62b4fd979f') in 0.010369 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/detailLight_traffic.mtl
-  artifactKey: Guid(be73dc21a5840554c8402c054e601b49) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/detailLight_traffic.mtl using Guid(be73dc21a5840554c8402c054e601b49) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '9846eb1135ccdb7f08903b9deb0f5de2') in 0.010085 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/roadAsphalt_pavement.obj
-  artifactKey: Guid(4101d4ca2f1bed14aaf23e0602487bf1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/roadAsphalt_pavement.obj using Guid(4101d4ca2f1bed14aaf23e0602487bf1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'fe35c5792f2f1be956a8b4e07a53c456') in 0.011968 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/wallA_painted.glb
-  artifactKey: Guid(6c6d9b0d6fb02f044890564f094d349a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/wallA_painted.glb using Guid(6c6d9b0d6fb02f044890564f094d349a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'ca841ea25ed9dd66e273af5dc271ce58') in 0.011189 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/detailLight_double.mtl
-  artifactKey: Guid(a3e2ae91838d03a45a7fc300b6a9b40f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/detailLight_double.mtl using Guid(a3e2ae91838d03a45a7fc300b6a9b40f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '58020c82bd23c4e28e03ddd7607c79f3') in 0.010389 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/roadDirt_center.obj
-  artifactKey: Guid(9b59e51e4c87e544aae5d9293ad91cea) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/roadDirt_center.obj using Guid(9b59e51e4c87e544aae5d9293ad91cea) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '94dfb2a33a34a3445e4ce60f0a23a6be') in 0.014364 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/windowSmall_typeB.glb
-  artifactKey: Guid(5f061c336b45feb4e910dc720d43d954) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/windowSmall_typeB.glb using Guid(5f061c336b45feb4e910dc720d43d954) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'bf1dbf395f4dd46480a3bd224005b53b') in 0.008995 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/balconyLadder_top.obj
-  artifactKey: Guid(e11fbf65cc3ea8d409c15db8e2f7ed29) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/balconyLadder_top.obj using Guid(e11fbf65cc3ea8d409c15db8e2f7ed29) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'c87043149f26f491d4786523fa4311b9') in 0.012496 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/balconyLadder_bottom.mtl
-  artifactKey: Guid(a8426d5c0222dcd418a14d8ca339e438) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/balconyLadder_bottom.mtl using Guid(a8426d5c0222dcd418a14d8ca339e438) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '7b53a7325937bd0c835f75c9c92b7093') in 0.009963 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/grass.mtl
-  artifactKey: Guid(af4d433bc38ec3d4abde012fe9515312) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/grass.mtl using Guid(af4d433bc38ec3d4abde012fe9515312) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'fd268a912dc2014c7b27043182e7ffaf') in 0.011394 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/wallB_flatGarage.glb
-  artifactKey: Guid(ec250a8ed74da2f40900942a844578fd) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/wallB_flatGarage.glb using Guid(ec250a8ed74da2f40900942a844578fd) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '56f97915980e15a6529a2b74d9978992') in 0.010915 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/detailBarrier_typeB.mtl
-  artifactKey: Guid(639d48d00ea4626498e867f47112fa07) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/detailBarrier_typeB.mtl using Guid(639d48d00ea4626498e867f47112fa07) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'a5191ec934b233ff3faa021868ab4635') in 0.012446 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/detailBeam.mtl
-  artifactKey: Guid(9f2d2f427c5b27941a7bb8802cc0ea21) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/detailBeam.mtl using Guid(9f2d2f427c5b27941a7bb8802cc0ea21) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '0a3f019a4ec1be50a2efad2d2baa5010') in 0.009926 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/detailDumpster_open.mtl
-  artifactKey: Guid(5a2feec42367f804ca826468891f24fc) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/detailDumpster_open.mtl using Guid(5a2feec42367f804ca826468891f24fc) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '26a7da5de20cba5a2db5d7e2f42d2df7') in 0.009325 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/detailBarrier_typeA.mtl
-  artifactKey: Guid(01cb2ba567c873147a4141680861013e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/detailBarrier_typeA.mtl using Guid(01cb2ba567c873147a4141680861013e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '4b287cc861f627d4f5f528507d053151') in 0.020746 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/detailDumpster_closed.mtl
-  artifactKey: Guid(43e6143ce50df804e8ec41ec7f3c5589) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/detailDumpster_closed.mtl using Guid(43e6143ce50df804e8ec41ec7f3c5589) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'aafeebb9435e6b6206b3f5270e591362') in 0.009741 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/wallA_corner.fbx
-  artifactKey: Guid(b89d7527c4d65cd4b8f93dc59d7e1afe) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/wallA_corner.fbx using Guid(b89d7527c4d65cd4b8f93dc59d7e1afe) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '1d57bd01d8d18e97305752e5ba22ad73') in 0.011584 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallB_door.obj
-  artifactKey: Guid(372afe5e0cf9e644981c5c60917d762b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallB_door.obj using Guid(372afe5e0cf9e644981c5c60917d762b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '0361f9c4625f75329768d52bfe8be968') in 0.012630 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/treePine_small.obj
-  artifactKey: Guid(52df2fc90bafe3741bb0798af9f5ee76) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/treePine_small.obj using Guid(52df2fc90bafe3741bb0798af9f5ee76) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'b950dfffb2b2f25bcdd0c21318a8494f') in 0.012606 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallA_low.obj
-  artifactKey: Guid(4d673e09b74bee84e9bada2a0ceadf89) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallA_low.obj using Guid(4d673e09b74bee84e9bada2a0ceadf89) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '1100707e9a3c59545b40553e8cfb6f38') in 0.012656 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallA_door.obj
-  artifactKey: Guid(7d9d3b43bc55e0c4aa30cb95042e85f5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallA_door.obj using Guid(7d9d3b43bc55e0c4aa30cb95042e85f5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'cfd81b6e6e2f6c569befb555ba6d530c') in 0.011942 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/tree_large.mtl
-  artifactKey: Guid(71e5d0d9f26540b419c48ba4a169c408) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/tree_large.mtl using Guid(71e5d0d9f26540b419c48ba4a169c408) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'f77f402bbe3a73d6e466cbf52fad8956') in 0.009135 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000042 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallA_garage.mtl
-  artifactKey: Guid(8ef5841cec5da8947b1e1c88e781e65c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallA_garage.mtl using Guid(8ef5841cec5da8947b1e1c88e781e65c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'cb293f77f7d40f035af81800c620b4bf') in 0.120986 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/scaffolding_structure.obj
-  artifactKey: Guid(f86505393e6b36d438e9755903ede838) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/scaffolding_structure.obj using Guid(f86505393e6b36d438e9755903ede838) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '98ee19e0a45aee7cd86f924cbed9ec26') in 0.011752 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/truck_flat.mtl
-  artifactKey: Guid(61f73537c3863994982cfd6b75f8cb90) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/truck_flat.mtl using Guid(61f73537c3863994982cfd6b75f8cb90) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '4046ec25251e4dad1871fbcbc4685cbc') in 0.009982 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/tree_shrub.obj
-  artifactKey: Guid(73e114d094bae9a4ba1e36f3213c2925) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/tree_shrub.obj using Guid(73e114d094bae9a4ba1e36f3213c2925) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'a90262ae490aea8c169d2438a02f6c7e') in 0.010666 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/roofMetal_poles.obj
-  artifactKey: Guid(02b9286c6f925ec4e96b86345b804f80) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/roofMetal_poles.obj using Guid(02b9286c6f925ec4e96b86345b804f80) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '1bcdbbe7112bf3918c478fc1ea3f58e0') in 0.013252 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallA_roofDetailed.obj
-  artifactKey: Guid(aca027b1be8111945b70b5e42d7dc6d5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallA_roofDetailed.obj using Guid(aca027b1be8111945b70b5e42d7dc6d5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '56c10911e54e169898a1a665f05808be') in 0.011083 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallB.mtl
-  artifactKey: Guid(2d9ace75c965b014481847139645ff6b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallB.mtl using Guid(2d9ace75c965b014481847139645ff6b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'c8b798d3aafdd0c332348937e33ef152') in 0.009990 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallA_flat.obj
-  artifactKey: Guid(8f8c17a287846c84d9d74f94dd5f673c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallA_flat.obj using Guid(8f8c17a287846c84d9d74f94dd5f673c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '877c2eb578f9336ca942589c564e1ade') in 0.020994 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/truck_flat.obj
-  artifactKey: Guid(7aaf7893ddc75144f8f4d42812442259) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/truck_flat.obj using Guid(7aaf7893ddc75144f8f4d42812442259) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '0270bb7046c34996f5f02ac081688789') in 0.011863 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/truck_grey.mtl
-  artifactKey: Guid(1938c689524a9f8468957817aace7265) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/truck_grey.mtl using Guid(1938c689524a9f8468957817aace7265) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '9c9a068e919ad6d94b7e3aafed3237b5') in 0.009685 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallA_detailPainted.mtl
-  artifactKey: Guid(2dc24ddf4c85fd34686e87e87bf6f0c0) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallA_detailPainted.mtl using Guid(2dc24ddf4c85fd34686e87e87bf6f0c0) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'e0c22dfd80476e39a33180816a5c5db6') in 0.009704 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallB_flat.obj
-  artifactKey: Guid(f92a3727d5895154db313b1bbdaaa050) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallB_flat.obj using Guid(f92a3727d5895154db313b1bbdaaa050) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '491f26c5f5c1a05ea936ecae7e675283') in 0.013705 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000046 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallB.obj
-  artifactKey: Guid(d9173094f75ce6c49b1e3da9c1b8d27b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallB.obj using Guid(d9173094f75ce6c49b1e3da9c1b8d27b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'f7a5a43d0968ce337ce674081a210aa5') in 0.011489 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallA_open.obj
-  artifactKey: Guid(4117c4a81e2d6f84aa4f1812f1b696c1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallA_open.obj using Guid(4117c4a81e2d6f84aa4f1812f1b696c1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'f37095f65beb292e50c3f91a9ebfb313') in 0.012025 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/detailBricks_typeB.stl
-  artifactKey: Guid(0fe5ed464a090a64c820023d71e920f8) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/detailBricks_typeB.stl using Guid(0fe5ed464a090a64c820023d71e920f8) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'c77144019b0606a61e0620c3f9780239') in 0.008995 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/detailDumpster_closed.stl
-  artifactKey: Guid(1e38135ab17185a418740f757fe8e879) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/detailDumpster_closed.stl using Guid(1e38135ab17185a418740f757fe8e879) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '4416c067184b290a33510415f933ae40') in 0.008776 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/detailLight_single.stl
-  artifactKey: Guid(57165b481308a2347a2b8290a68dcf51) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/detailLight_single.stl using Guid(57165b481308a2347a2b8290a68dcf51) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '1114a1a1c074a6c6651da043476bb339') in 0.009653 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/detailBarrierStrong_damaged.stl
-  artifactKey: Guid(4f3971ea01b69d745ac63bbf48ab1a68) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/detailBarrierStrong_damaged.stl using Guid(4f3971ea01b69d745ac63bbf48ab1a68) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'ab6b367b0670021b145f1d5619798a31') in 0.009541 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallB_roof.mtl
-  artifactKey: Guid(597d69635f485c94c83867929e70e0d9) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallB_roof.mtl using Guid(597d69635f485c94c83867929e70e0d9) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '5b4d85353e08005f22ebb1b6b6395732') in 0.022979 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/detailBeam.stl
-  artifactKey: Guid(d2ddf147e0e61594ea0b4ba0ed264bdc) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/detailBeam.stl using Guid(d2ddf147e0e61594ea0b4ba0ed264bdc) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '2166c62b4051ddec6f39e2fa11dadffc') in 0.009393 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallB_window.mtl
-  artifactKey: Guid(7e1c93710c24e5c4297fc8db4fef4a23) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallB_window.mtl using Guid(7e1c93710c24e5c4297fc8db4fef4a23) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '1ba689f45ee1b0e423b6227e28b8ead9') in 0.008648 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/detailLight_double.stl
-  artifactKey: Guid(fceffea1eebbe90469c7f4417b54474e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/detailLight_double.stl using Guid(fceffea1eebbe90469c7f4417b54474e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'c30a15400491c077c959ad38ca433bcf') in 0.009631 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wall_typeA.mtl
-  artifactKey: Guid(08e9670b1b0e7ea488cc07d0b34ca8b7) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wall_typeA.mtl using Guid(08e9670b1b0e7ea488cc07d0b34ca8b7) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'c12182cfc43af0fa843f2ac29a7ea446') in 0.008647 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/windowWide_typeD.obj
-  artifactKey: Guid(ec13daf9d8ffab04baebf8f8a75810df) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/windowWide_typeD.obj using Guid(ec13daf9d8ffab04baebf8f8a75810df) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'a25ea0617638ef6713631928092e5f18') in 0.014309 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wall_typeB.obj
-  artifactKey: Guid(24cc7bf2c922221408e82e0b1f26f210) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wall_typeB.obj using Guid(24cc7bf2c922221408e82e0b1f26f210) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '9d5c64639f0d6b56edf599994d85c9a9') in 0.012932 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallB_roofDetailed.obj
-  artifactKey: Guid(a234d183aea1f8e4f99481cc2354c38b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallB_roofDetailed.obj using Guid(a234d183aea1f8e4f99481cc2354c38b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '2aeb4d07463de74a4f9d1028b73960ad') in 0.013056 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/roadAsphalt_cornerOuter.stl
-  artifactKey: Guid(958c9f238f24b324fb15f6d1150ee663) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/roadAsphalt_cornerOuter.stl using Guid(958c9f238f24b324fb15f6d1150ee663) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '498bbd7bb9c351b0ec31b20c4a05800d') in 0.009822 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/roadDirt_cornerInner.stl
-  artifactKey: Guid(a335d951e3ee2784ca8f4869b7f4a6f6) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/roadDirt_cornerInner.stl using Guid(a335d951e3ee2784ca8f4869b7f4a6f6) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'ff19afd0e4d56935b12117ca092dd5d5') in 0.009855 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallC_flat.obj
-  artifactKey: Guid(0829420c33c11744699a18939c9432bd) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallC_flat.obj using Guid(0829420c33c11744699a18939c9432bd) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '79991b44b8194790ea928e5f150c1fef') in 0.011019 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/roadAsphalt_cornerInner.stl
-  artifactKey: Guid(163fe0ee34c12f24c8a80b0804c4c290) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/roadAsphalt_cornerInner.stl using Guid(163fe0ee34c12f24c8a80b0804c4c290) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '2d1798afab1bb610832d899ba2fef2d5') in 0.009206 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/grass.stl
-  artifactKey: Guid(d3f7cae9551f15b45be482a0941d0770) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/grass.stl using Guid(d3f7cae9551f15b45be482a0941d0770) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '37a7fda2e7aa10a08df5f84b46f8808f') in 0.011345 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/wallB_roofSlantDetailed.glb
-  artifactKey: Guid(aaedfd63ee671c646831f4183e2dee2a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/wallB_roofSlantDetailed.glb using Guid(aaedfd63ee671c646831f4183e2dee2a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '069349229e4417dee432f04db16c8c78') in 0.009118 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/detailBarrierStrong_typeB.mtl
-  artifactKey: Guid(0dafc7bafaeca6246a7416e38a80cca6) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/detailBarrierStrong_typeB.mtl using Guid(0dafc7bafaeca6246a7416e38a80cca6) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '9dfbea81ae5805da54f50ae201cb9340') in 0.010206 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000046 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/treePine_small.glb
-  artifactKey: Guid(9db0a278626b06b4cb6ff621c4fa6913) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/GLTF format/treePine_small.glb using Guid(9db0a278626b06b4cb6ff621c4fa6913) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'e3512e530c89bdf8ba726e37053fc308') in 0.010046 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallB_flatWindow.mtl
-  artifactKey: Guid(f526af23438de5245bb3d155ba6d410c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallB_flatWindow.mtl using Guid(f526af23438de5245bb3d155ba6d410c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '6bd7664708dc444140e621ff04996be4') in 0.009529 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/detailCables_typeA.mtl
-  artifactKey: Guid(b390e9d52346153458cbac07d3983ee5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/detailCables_typeA.mtl using Guid(b390e9d52346153458cbac07d3983ee5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'd279954092f41505d9a3f0058a85e640') in 0.009444 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/roadDirt_damaged.obj
-  artifactKey: Guid(58f80f087a70f594ea0a0bc9982a1213) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/roadDirt_damaged.obj using Guid(58f80f087a70f594ea0a0bc9982a1213) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '21dc3b9ce7ac3abc064d10338bca55fa') in 0.012984 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/roadAsphalt_pavement.stl
-  artifactKey: Guid(698b37ab9a7a4d145bd9d70cc685f818) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/roadAsphalt_pavement.stl using Guid(698b37ab9a7a4d145bd9d70cc685f818) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'd520f2e413c650b51223aba3b66f8db8') in 0.009170 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/roadDirt_pavement.stl
-  artifactKey: Guid(1212699fd5eff804192203902d9e916e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/roadDirt_pavement.stl using Guid(1212699fd5eff804192203902d9e916e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '8937e1683bb41e905f8fb1b437db1b0b') in 0.010387 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/wall_typeA.stl
-  artifactKey: Guid(b3b8587305ff6e54c8069ae7ea711e63) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/wall_typeA.stl using Guid(b3b8587305ff6e54c8069ae7ea711e63) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'ca9c2dedfba1f6723bf53c567fda87b5') in 0.009589 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/_project/ImportedAssets/Retro Medieval Kit/Models/DAE format/Textures/barrel.png
-  artifactKey: Guid(dcc88fc3b14fc0d4fa4a08abef817934) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Medieval Kit/Models/DAE format/Textures/barrel.png using Guid(dcc88fc3b14fc0d4fa4a08abef817934) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '8f29679f2114ffa05ae60b35fec27c4c') in 0.019151 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/_project/ImportedAssets/Retro Medieval Kit/Models/FBX format/Textures/barrel.png
-  artifactKey: Guid(19181d6af3ecbae43a4a5b1fe71b807a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Medieval Kit/Models/FBX format/Textures/barrel.png using Guid(19181d6af3ecbae43a4a5b1fe71b807a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'caede2cfe78572be9d08b6b6477508f8') in 0.009770 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/wallA_open.stl
-  artifactKey: Guid(b0198b9a940be9f49be332332d37c371) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/wallA_open.stl using Guid(b0198b9a940be9f49be332332d37c371) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '407666615812af952968c615d8b96ae3') in 0.009038 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/_project/ImportedAssets/Retro Medieval Kit/Models/OBJ format/Textures/fence.png
-  artifactKey: Guid(3a68d9583dcf49c4b93bff0aba25baac) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Medieval Kit/Models/OBJ format/Textures/fence.png using Guid(3a68d9583dcf49c4b93bff0aba25baac) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '66a46b73f5fc64f8f6e60a5967c5055b') in 0.008846 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/_project/ImportedAssets/Retro Medieval Kit/Models/DAE format/Textures/stonesPainted.png
-  artifactKey: Guid(18eb9e02b6f39254d8d1204f7744366b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Medieval Kit/Models/DAE format/Textures/stonesPainted.png using Guid(18eb9e02b6f39254d8d1204f7744366b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '4b6c1b745b64217ebb742eeea75f1bb7') in 0.013632 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/treePine_large.stl
-  artifactKey: Guid(ce1e5eb9f1331604f93e9b736ea52f42) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/treePine_large.stl using Guid(ce1e5eb9f1331604f93e9b736ea52f42) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '1c3bf78f6c4346c542b6217df5cc96de') in 0.009645 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/roofMetal_typeA.stl
-  artifactKey: Guid(9931d70b0dd43c34ab30fe58ba90b668) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/roofMetal_typeA.stl using Guid(9931d70b0dd43c34ab30fe58ba90b668) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '9fecff378af52fba083326716738bf8d') in 0.012027 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/Textures/roof_plates.png
-  artifactKey: Guid(22f96786cce08dc44b13f139927985c2) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/Textures/roof_plates.png using Guid(22f96786cce08dc44b13f139927985c2) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '7a53a6e1d00249c14c32a5e803a97f55') in 0.012526 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/_project/ImportedAssets/Retro Medieval Kit/Models/FBX format/Textures/fence.png
-  artifactKey: Guid(e7dad5aff1fdafa4ebea0bc560b416bf) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Medieval Kit/Models/FBX format/Textures/fence.png using Guid(e7dad5aff1fdafa4ebea0bc560b416bf) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '018c46dcedb2a0923fa33cca46fe9e76') in 0.010493 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/wallA_lowPainted.stl
-  artifactKey: Guid(88da0d549b8c4834c9960860372b7273) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/wallA_lowPainted.stl using Guid(88da0d549b8c4834c9960860372b7273) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'a386b3adb77bdb1da21348d14cc3e3e0') in 0.009541 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/scaffolding_structure.stl
-  artifactKey: Guid(04c0382eb7c2ebf4d90af81af7387f21) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/scaffolding_structure.stl using Guid(04c0382eb7c2ebf4d90af81af7387f21) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'bdcda083539c6d7089733e01c40c0518') in 0.010996 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/wallB_roofSlantDetailed.stl
-  artifactKey: Guid(bf0659740dafd68499f5d83ad6c04477) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/wallB_roofSlantDetailed.stl using Guid(bf0659740dafd68499f5d83ad6c04477) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'ad59deac01742023fa4acb49d4e2567b') in 0.010581 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/wallA_window.stl
-  artifactKey: Guid(d08f13efe8a2fbc4eaee4d3708904eb3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/wallA_window.stl using Guid(d08f13efe8a2fbc4eaee4d3708904eb3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'c12f8dbf709c3a04d2306fd749a099df') in 0.010686 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/wallA_cornerPainted.stl
-  artifactKey: Guid(97328bbd34c629445abd85c5d09bc4a8) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/wallA_cornerPainted.stl using Guid(97328bbd34c629445abd85c5d09bc4a8) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'd37987400738e2c464c913f8c777f4c6') in 0.011142 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/wallA_door.stl
-  artifactKey: Guid(e3fc106356ce0884c8ed9091fdf6e92c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/wallA_door.stl using Guid(e3fc106356ce0884c8ed9091fdf6e92c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'c9c254f85ce835842bdee827a0eadc98') in 0.010193 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000052 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/wallC_flatLow.stl
-  artifactKey: Guid(427e8eb70cd46a1419d63e8f7cf12b55) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/wallC_flatLow.stl using Guid(427e8eb70cd46a1419d63e8f7cf12b55) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'e71e958a4d873de666527d144ae46656') in 0.010694 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/wallB_window.stl
-  artifactKey: Guid(3a38a3e90caaf7e44b4aadee821e8096) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/wallB_window.stl using Guid(3a38a3e90caaf7e44b4aadee821e8096) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '99be6c09aab47cc06f8506f3e4a21345') in 0.011723 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/windowWide_typeC.stl
-  artifactKey: Guid(edaaef646b3a4a24e8b0a0bab88441cc) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/windowWide_typeC.stl using Guid(edaaef646b3a4a24e8b0a0bab88441cc) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '0154aca53d9eab2d22063c7f5b31f60b') in 0.009739 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/_project/ImportedAssets/Retro Medieval Kit/Models/OBJ format/Textures/roof.png
-  artifactKey: Guid(949c0c4a527c11f4ba52cdc1bd1d59f9) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Medieval Kit/Models/OBJ format/Textures/roof.png using Guid(949c0c4a527c11f4ba52cdc1bd1d59f9) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'dc15ae77b8e59ed17e06ed2ab463b22a') in 0.009553 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/roofMetal_poles.stl
-  artifactKey: Guid(7fbb05c9ca5f835459c1b8a0b6c05331) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/roofMetal_poles.stl using Guid(7fbb05c9ca5f835459c1b8a0b6c05331) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '78be5712da48d96ac2cf3ec5f7ddad4a') in 0.023049 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/wallA_flatWindow.stl
-  artifactKey: Guid(922a5a17603ca214597cdfa9f873bd7e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/STL format/wallA_flatWindow.stl using Guid(922a5a17603ca214597cdfa9f873bd7e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '045a01d0c37d2156532e88a98649c066') in 0.010070 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/Textures/metal.png
-  artifactKey: Guid(17c17248dbd8cee4fb4c6ff82baa304d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/Textures/metal.png using Guid(17c17248dbd8cee4fb4c6ff82baa304d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'fce7bbebaecbcd0e0780a525b0bf8ab5') in 0.012276 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/Textures/metal.png
-  artifactKey: Guid(41f92d28ec88fc249b34d43cfa378f60) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/Textures/metal.png using Guid(41f92d28ec88fc249b34d43cfa378f60) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '406a508e68863a623f20901dfeb04752') in 0.010619 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/Textures/signs.png
-  artifactKey: Guid(cbeb8fd2a99c5dc41a36f5c89b2e6b32) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/Textures/signs.png using Guid(cbeb8fd2a99c5dc41a36f5c89b2e6b32) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '7623bf324a00d9f68205997faab8cae8') in 0.012912 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/Textures/wall_metal.png
-  artifactKey: Guid(931503fc23d24e440aa1c2aa37c27653) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/Textures/wall_metal.png using Guid(931503fc23d24e440aa1c2aa37c27653) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '8189e9f29a5514b511625d50d1863bde') in 0.010549 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/Textures/bars.png
-  artifactKey: Guid(2700ed5efeed8a740ae316bb92e7f585) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/Textures/bars.png using Guid(2700ed5efeed8a740ae316bb92e7f585) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '15c3c8622af1c64c7d78ad74c8108ebc') in 0.008875 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/Textures/treeB.png
-  artifactKey: Guid(a437ce272045b8d428348f07fb981d91) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/Textures/treeB.png using Guid(a437ce272045b8d428348f07fb981d91) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '0149d15a706cb45b4d10cce2712f98a9') in 0.012569 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/Textures/dirt.png
-  artifactKey: Guid(db39d39f8b19a984fb8bfadad0089ec3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/Textures/dirt.png using Guid(db39d39f8b19a984fb8bfadad0089ec3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '34f34ecb0f86bd7e97862490c0463dfd') in 0.010262 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/Textures/wall_garage.png
-  artifactKey: Guid(56b940afc15439c4997ab76a3b68994f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/Textures/wall_garage.png using Guid(56b940afc15439c4997ab76a3b68994f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '01f70e99f4c8e8a0b774faf3fe2e4926') in 0.010601 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/Textures/treeA.png
-  artifactKey: Guid(f48dcde80331bd74d96c70849406e383) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/Textures/treeA.png using Guid(f48dcde80331bd74d96c70849406e383) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '173f8961d8c30b4e1010c9dc464d5c1c') in 0.009791 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/Textures/truck.png
-  artifactKey: Guid(56e3c6c399aef4145931fbeb34ea5464) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/Textures/truck.png using Guid(56e3c6c399aef4145931fbeb34ea5464) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '6a7e01145a44b64664b4bc902e9e7d7e') in 0.009757 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/Textures/concrete.png
-  artifactKey: Guid(8d6f28c29860af04ab7ae6929ffafd6e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/Textures/concrete.png using Guid(8d6f28c29860af04ab7ae6929ffafd6e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'a6689c07f2814cd538cb4c08afe54b8f') in 0.011637 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/Textures/truck.png
-  artifactKey: Guid(6fdb2e749c9e946408a29d0829ab0b55) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/Textures/truck.png using Guid(6fdb2e749c9e946408a29d0829ab0b55) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'adcd8889344214e17d3a1bb4341109f9') in 0.010160 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/Textures/wall_lines.png
-  artifactKey: Guid(be2e0a7f1869caa4784cfffa7729c8f5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/Textures/wall_lines.png using Guid(be2e0a7f1869caa4784cfffa7729c8f5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '2a15bbdd1dccd1ac9f7ecb5463fcca9e') in 0.010145 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/Textures/truck_alien.png
-  artifactKey: Guid(71eb7939cf3bb5243aa43a997e940204) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/Textures/truck_alien.png using Guid(71eb7939cf3bb5243aa43a997e940204) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'adbc1672f8e01db7370d7383434faa27') in 0.008960 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/detailAwning_wide.obj
-  artifactKey: Guid(f90dba4bef49b7d4ea46563c574bbe60) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/detailAwning_wide.obj using Guid(f90dba4bef49b7d4ea46563c574bbe60) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '3c43e1c8d441b43cb1a45adb9a332a3d') in 0.012759 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/wallBroken_typeA.dae
-  artifactKey: Guid(2bc0156d180d0244facc39a2576193ac) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/wallBroken_typeA.dae using Guid(2bc0156d180d0244facc39a2576193ac) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '4a5a5e55b49dfe72b293bc3d698ce8e4') in 0.010095 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/roadAsphalt_center.obj
-  artifactKey: Guid(1fe1c4252e1e3a541af78fe7659ca148) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/roadAsphalt_center.obj using Guid(1fe1c4252e1e3a541af78fe7659ca148) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'e232444319e65d5db99abcb4ca3c80a0') in 0.011959 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000043 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallFence.mtl
-  artifactKey: Guid(e12a614797e88aa4ebac856f51f3907a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallFence.mtl using Guid(e12a614797e88aa4ebac856f51f3907a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'd5365dd577109948de22f5750b8bbc39') in 0.009548 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/roofMetal_typeB.obj
-  artifactKey: Guid(561b56ec4a9c7974c925d235ff153888) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/roofMetal_typeB.obj using Guid(561b56ec4a9c7974c925d235ff153888) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '8ff3420383c763e0a2c9992fd0d9c868') in 0.012195 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/_project/ImportedAssets/Retro Medieval Kit/Models/OBJ format/floor_stairsCornerInner.obj
-  artifactKey: Guid(328922108d7d75d409a4cdd385ac8bde) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Medieval Kit/Models/OBJ format/floor_stairsCornerInner.obj using Guid(328922108d7d75d409a4cdd385ac8bde) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'a451bc251f84c936d76bc3f65d102793') in 0.012918 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/_project/ImportedAssets/Retro Medieval Kit/Models/DAE format/floor.dae
-  artifactKey: Guid(3ecd143fb511d5b4ea64ec0291d4473b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Medieval Kit/Models/DAE format/floor.dae using Guid(3ecd143fb511d5b4ea64ec0291d4473b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '989c366d045b3bcf2ff3ff39508e2927') in 0.012362 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/_project/ImportedAssets/Retro Medieval Kit/Models/OBJ format/wall_gateHalf.mtl
-  artifactKey: Guid(224c4b98a05dab1488af04c4366d94b1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Medieval Kit/Models/OBJ format/wall_gateHalf.mtl using Guid(224c4b98a05dab1488af04c4366d94b1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'a161a476c2af33595d73f5a483e56e39') in 0.009935 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/_project/ImportedAssets/Retro Medieval Kit/Models/DAE format/tower_base.dae
-  artifactKey: Guid(f7e580ae99328014b99a42a95931c5a3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Medieval Kit/Models/DAE format/tower_base.dae using Guid(f7e580ae99328014b99a42a95931c5a3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'c57c191bbe7016fe54bf47736efbc3b5') in 0.013342 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/_project/ImportedAssets/Retro Medieval Kit/Models/FBX format/wallFortifiedPaint_gate.fbx
-  artifactKey: Guid(5a1d5f887c1de5140a7d0c892a0f8368) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Medieval Kit/Models/FBX format/wallFortifiedPaint_gate.fbx using Guid(5a1d5f887c1de5140a7d0c892a0f8368) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'e0d40dd04456cf2e40bae6fc0b1f7157') in 0.012899 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallSteps_typeB.obj
-  artifactKey: Guid(681f75a1cbaeeaf41a31b01096f8698a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/OBJ format/wallSteps_typeB.obj using Guid(681f75a1cbaeeaf41a31b01096f8698a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '74ffd39b908b39ded946d6402bdeee45') in 0.013716 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/wallB_garage.dae
-  artifactKey: Guid(1f8a6aa6b78d3c04daad27ed0f66cc49) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
-Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/wallB_garage.dae using Guid(1f8a6aa6b78d3c04daad27ed0f66cc49) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'c8d90491f311058d77f0a9a2d7c07a68') in 0.011346 seconds 
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/wallB_flatGarage.dae
+  artifactKey: Guid(7a18a611f8262f64eac72726f01a17c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/wallB_flatGarage.dae using Guid(7a18a611f8262f64eac72726f01a17c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e49d8ddfd79ca84a94a8bfa6af78b50') in 0.058384 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000087 seconds.
+  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/wallB_roofSlant.dae
+  artifactKey: Guid(f07d6adb4f4a32244b1e36006dfbc0c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/DAE format/wallB_roofSlant.dae using Guid(f07d6adb4f4a32244b1e36006dfbc0c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '073919a33dbe0f0f5a8cf61c87f2064c') in 0.056072 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.112827 seconds.
+  path: Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/wallA_roofSlant.fbx
+  artifactKey: Guid(e7c2471bb55e5c24b89d5ba70524ecab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_project/ImportedAssets/Retro Urban Kit/Models/FBX format/wallA_roofSlant.fbx using Guid(e7c2471bb55e5c24b89d5ba70524ecab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '239ccdeaab6f70671e9832e64d4a56d0') in 0.070448 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011060 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ariag\Documents\Heph\Heph\Heph\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ariag\Documents\Heph\Heph\Heph\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.21 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.766 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1766ms)
+		BeginReloadAssembly (171ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (52ms)
+		EndReloadAssembly (1463ms)
+			LoadAssemblies (107ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (403ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (66ms)
+			SetupLoadedEditorAssemblies (745ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (14ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (105ms)
+				ProcessInitializeOnLoadAttributes (514ms)
+				ProcessInitializeOnLoadMethodAttributes (97ms)
+				AfterProcessingInitializeOnLoad (13ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (32ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.54 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5422 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (381.5 KB). Loaded Objects now: 6223.
+Memory consumption went from 253.0 MB to 252.6 MB.
+Total: 5.485900 ms (FindLiveObjects: 0.669000 ms CreateObjectMapping: 0.351700 ms MarkObjects: 4.336800 ms  DeleteObjects: 0.126800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008916 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ariag\Documents\Heph\Heph\Heph\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ariag\Documents\Heph\Heph\Heph\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.565 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1566ms)
+		BeginReloadAssembly (140ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (42ms)
+		EndReloadAssembly (1302ms)
+			LoadAssemblies (89ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (321ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (61ms)
+			SetupLoadedEditorAssemblies (731ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (104ms)
+				ProcessInitializeOnLoadAttributes (513ms)
+				ProcessInitializeOnLoadMethodAttributes (87ms)
+				AfterProcessingInitializeOnLoad (11ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (28ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.04 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5406 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (380.5 KB). Loaded Objects now: 6237.
+Memory consumption went from 251.9 MB to 251.5 MB.
+Total: 4.587300 ms (FindLiveObjects: 0.485600 ms CreateObjectMapping: 0.180900 ms MarkObjects: 3.831000 ms  DeleteObjects: 0.088000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008789 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ariag\Documents\Heph\Heph\Heph\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ariag\Documents\Heph\Heph\Heph\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.07 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.479 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1480ms)
+		BeginReloadAssembly (145ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (45ms)
+		EndReloadAssembly (1207ms)
+			LoadAssemblies (88ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (327ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (56ms)
+			SetupLoadedEditorAssemblies (652ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (92ms)
+				ProcessInitializeOnLoadAttributes (453ms)
+				ProcessInitializeOnLoadMethodAttributes (81ms)
+				AfterProcessingInitializeOnLoad (11ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (25ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.45 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5406 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (380.6 KB). Loaded Objects now: 6251.
+Memory consumption went from 251.9 MB to 251.6 MB.
+Total: 8.247100 ms (FindLiveObjects: 0.864700 ms CreateObjectMapping: 0.701500 ms MarkObjects: 6.508300 ms  DeleteObjects: 0.170000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009996 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ariag\Documents\Heph\Heph\Heph\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ariag\Documents\Heph\Heph\Heph\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 3.50 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.586 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1587ms)
+		BeginReloadAssembly (143ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (10ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (38ms)
+		EndReloadAssembly (1311ms)
+			LoadAssemblies (92ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (335ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (54ms)
+			SetupLoadedEditorAssemblies (733ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (32ms)
+				SetLoadedEditorAssemblies (2ms)
+				RefreshPlugins (4ms)
+				BeforeProcessingInitializeOnLoad (101ms)
+				ProcessInitializeOnLoadAttributes (497ms)
+				ProcessInitializeOnLoadMethodAttributes (88ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (23ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.45 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5406 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (380.6 KB). Loaded Objects now: 6265.
+Memory consumption went from 251.9 MB to 251.6 MB.
+Total: 4.722800 ms (FindLiveObjects: 0.495400 ms CreateObjectMapping: 0.180900 ms MarkObjects: 3.941600 ms  DeleteObjects: 0.103500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013175 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ariag\Documents\Heph\Heph\Heph\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ariag\Documents\Heph\Heph\Heph\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.07 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.908 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1910ms)
+		BeginReloadAssembly (212ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (62ms)
+		EndReloadAssembly (1563ms)
+			LoadAssemblies (132ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (386ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (62ms)
+			SetupLoadedEditorAssemblies (898ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (14ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (110ms)
+				ProcessInitializeOnLoadAttributes (628ms)
+				ProcessInitializeOnLoadMethodAttributes (131ms)
+				AfterProcessingInitializeOnLoad (12ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (35ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.64 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5406 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (380.6 KB). Loaded Objects now: 6279.
+Memory consumption went from 252.0 MB to 251.6 MB.
+Total: 8.036200 ms (FindLiveObjects: 0.685800 ms CreateObjectMapping: 0.701000 ms MarkObjects: 6.498000 ms  DeleteObjects: 0.149400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009577 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ariag\Documents\Heph\Heph\Heph\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ariag\Documents\Heph\Heph\Heph\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.61 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.550 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1551ms)
+		BeginReloadAssembly (155ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (48ms)
+		EndReloadAssembly (1274ms)
+			LoadAssemblies (98ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (327ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (53ms)
+			SetupLoadedEditorAssemblies (688ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (14ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (106ms)
+				ProcessInitializeOnLoadAttributes (478ms)
+				ProcessInitializeOnLoadMethodAttributes (78ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (30ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.57 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5406 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (380.6 KB). Loaded Objects now: 6293.
+Memory consumption went from 252.0 MB to 251.6 MB.
+Total: 4.739200 ms (FindLiveObjects: 0.500300 ms CreateObjectMapping: 0.179300 ms MarkObjects: 3.971200 ms  DeleteObjects: 0.086800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010559 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ariag\Documents\Heph\Heph\Heph\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ariag\Documents\Heph\Heph\Heph\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.43 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.561 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1562ms)
+		BeginReloadAssembly (140ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (41ms)
+		EndReloadAssembly (1297ms)
+			LoadAssemblies (100ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (306ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (51ms)
+			SetupLoadedEditorAssemblies (722ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (112ms)
+				ProcessInitializeOnLoadAttributes (496ms)
+				ProcessInitializeOnLoadMethodAttributes (86ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (23ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.34 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5406 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (380.5 KB). Loaded Objects now: 6307.
+Memory consumption went from 251.8 MB to 251.5 MB.
+Total: 7.223800 ms (FindLiveObjects: 0.662300 ms CreateObjectMapping: 0.856900 ms MarkObjects: 5.519100 ms  DeleteObjects: 0.183600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008738 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ariag\Documents\Heph\Heph\Heph\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ariag\Documents\Heph\Heph\Heph\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.81 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.678 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1678ms)
+		BeginReloadAssembly (160ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (49ms)
+		EndReloadAssembly (1379ms)
+			LoadAssemblies (97ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (381ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (66ms)
+			SetupLoadedEditorAssemblies (722ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (17ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (107ms)
+				ProcessInitializeOnLoadAttributes (495ms)
+				ProcessInitializeOnLoadMethodAttributes (91ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (28ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.27 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5406 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (380.6 KB). Loaded Objects now: 6321.
+Memory consumption went from 252.0 MB to 251.7 MB.
+Total: 6.396500 ms (FindLiveObjects: 0.604200 ms CreateObjectMapping: 0.394200 ms MarkObjects: 5.289400 ms  DeleteObjects: 0.106600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010340 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ariag\Documents\Heph\Heph\Heph\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ariag\Documents\Heph\Heph\Heph\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.04 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.501 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1502ms)
+		BeginReloadAssembly (145ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (43ms)
+		EndReloadAssembly (1234ms)
+			LoadAssemblies (92ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (328ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (58ms)
+			SetupLoadedEditorAssemblies (657ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (91ms)
+				ProcessInitializeOnLoadAttributes (447ms)
+				ProcessInitializeOnLoadMethodAttributes (91ms)
+				AfterProcessingInitializeOnLoad (13ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (28ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.05 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5406 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (380.6 KB). Loaded Objects now: 6335.
+Memory consumption went from 252.1 MB to 251.7 MB.
+Total: 4.395600 ms (FindLiveObjects: 0.492600 ms CreateObjectMapping: 0.163800 ms MarkObjects: 3.653500 ms  DeleteObjects: 0.084000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008793 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ariag\Documents\Heph\Heph\Heph\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ariag\Documents\Heph\Heph\Heph\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.97 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.530 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1531ms)
+		BeginReloadAssembly (150ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (39ms)
+		EndReloadAssembly (1255ms)
+			LoadAssemblies (102ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (319ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (63ms)
+			SetupLoadedEditorAssemblies (682ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (100ms)
+				ProcessInitializeOnLoadAttributes (465ms)
+				ProcessInitializeOnLoadMethodAttributes (90ms)
+				AfterProcessingInitializeOnLoad (13ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (25ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.41 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5406 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (380.7 KB). Loaded Objects now: 6349.
+Memory consumption went from 252.2 MB to 251.8 MB.
+Total: 4.521800 ms (FindLiveObjects: 0.519000 ms CreateObjectMapping: 0.172200 ms MarkObjects: 3.749900 ms  DeleteObjects: 0.079500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012118 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ariag\Documents\Heph\Heph\Heph\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ariag\Documents\Heph\Heph\Heph\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.96 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.634 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1635ms)
+		BeginReloadAssembly (146ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (47ms)
+		EndReloadAssembly (1358ms)
+			LoadAssemblies (89ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (338ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (62ms)
+			SetupLoadedEditorAssemblies (747ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (14ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (126ms)
+				ProcessInitializeOnLoadAttributes (504ms)
+				ProcessInitializeOnLoadMethodAttributes (89ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (30ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.09 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5406 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (380.6 KB). Loaded Objects now: 6363.
+Memory consumption went from 252.2 MB to 251.8 MB.
+Total: 4.757000 ms (FindLiveObjects: 0.514600 ms CreateObjectMapping: 0.176200 ms MarkObjects: 3.969300 ms  DeleteObjects: 0.095200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011039 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ariag\Documents\Heph\Heph\Heph\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ariag\Documents\Heph\Heph\Heph\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.26 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.471 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1472ms)
+		BeginReloadAssembly (146ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (44ms)
+		EndReloadAssembly (1204ms)
+			LoadAssemblies (93ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (297ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (60ms)
+			SetupLoadedEditorAssemblies (658ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (104ms)
+				ProcessInitializeOnLoadAttributes (451ms)
+				ProcessInitializeOnLoadMethodAttributes (79ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (28ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.12 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5406 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (380.7 KB). Loaded Objects now: 6377.
+Memory consumption went from 252.0 MB to 251.6 MB.
+Total: 5.494600 ms (FindLiveObjects: 0.528000 ms CreateObjectMapping: 0.196500 ms MarkObjects: 4.665200 ms  DeleteObjects: 0.103000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 

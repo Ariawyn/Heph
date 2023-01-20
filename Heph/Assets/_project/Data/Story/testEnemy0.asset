@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterID: testEnemy0
   characterStories:
-  - {fileID: 4900000, guid: 7e3d37fa8de14e44c80a19cc63a1a634, type: 3}
+  - {fileID: 4900000, guid: 0dc708a8ce12df24a93a6cb44af23c03, type: 3}

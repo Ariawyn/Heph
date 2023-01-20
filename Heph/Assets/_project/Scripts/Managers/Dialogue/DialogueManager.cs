@@ -152,7 +152,7 @@ namespace Heph.Scripts.Managers.Dialogue
 
         private void HandleChoiceMade(bool isPlayer, int choiceIndex, bool isDialogueCard)
         {
-            CombatEventsManager.Instance.OnToggleChoicesUI(true, isDialogueCard, isDialogueCard);
+            CombatEventsManager.Instance.OnToggleChoicesUI(false, isDialogueCard, isDialogueCard);
             _currentStory.ChooseChoiceIndex(choiceIndex);
             AdvanceDialogue();
         }

@@ -155,12 +155,12 @@ namespace Heph.Scripts.Combat
             currentCombatRound = 0;
             currentRoundAction = 0;
             highestFighterDesire = 0; 
-            _gameManager.MoveToOverworld();
+            _gameManager.MoveToResultsScreen();
         }
 
         private void HandleFighterDefeat(string fighterID)
         {
-            Debug.Log(fighterID != "player" ? "Player won!" : "Player defeated!");
+            _gameManager.lastCombatResult = fighterID != "player" ? "Player won!" : "Player defeated!";
             ResetAfterBattle();
         }
     }

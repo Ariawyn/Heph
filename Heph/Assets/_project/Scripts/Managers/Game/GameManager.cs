@@ -21,8 +21,10 @@ namespace Heph.Scripts.Managers.Game
 
 		[NonSerialized] private string currentEnemyFighter = "";
 		[NonSerialized] private bool hasSeenCombatTutorial = false;
-		
-		public StoryLibrary storylibrary;
+
+		[NonSerialized] public string lastCombatResult = "none";
+
+	public StoryLibrary storylibrary;
 
 		public DEVIATION_CONTROL currentDeviationsActive = DEVIATION_CONTROL.NONE;
 		
@@ -54,7 +56,24 @@ namespace Heph.Scripts.Managers.Game
 			currentEnemyFighter = enemyFighterID;
 			if (!hasSeenCombatTutorial)
 			{
-				_levelManager.LoadLevel("tutorialCombat");
+				switch(currentDeviationsActive)
+				{
+					case DEVIATION_CONTROL.NONE:
+						_levelManager.LoadLevel("TutorialCombat");
+						break;
+					case DEVIATION_CONTROL.FIRST:
+						_levelManager.LoadLevel("TutorialDeviation1");
+						break;
+					case DEVIATION_CONTROL.SECOND:
+						_levelManager.LoadLevel("TutorialDeviation2");
+						break;
+					case DEVIATION_CONTROL.BOTH:
+						_levelManager.LoadLevel("TutorialDeviationBoth");
+						break;
+					default:
+						_levelManager.LoadLevel("TutorialCombat");
+						break;
+				}
 			}
 			else
 			{
@@ -84,6 +103,11 @@ namespace Heph.Scripts.Managers.Game
 		public void MoveToOverworld()
 		{
 			StartCoroutine(LevelManager.LoadLevelAsync("Overworld", true, null));
+		}
+
+		public void MoveToResultsScreen()
+		{
+			StartCoroutine(LevelManager.LoadLevelAsync("ResultsScreen", true, null));
 		}
 
 		public void UpdateDeviation(DEVIATION_CONTROL control_val)

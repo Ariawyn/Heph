@@ -15,8 +15,20 @@ EditorBuildSettings:
     path: Assets/_project/Scenes/TutorialCombat.unity
     guid: 126234ccc55836a4eacd7bc0cd3935b0
   - enabled: 1
+    path: Assets/_project/Scenes/TutorialDeviation1.unity
+    guid: b0e0a595410dcc1489d26ac63f8189f2
+  - enabled: 1
+    path: Assets/_project/Scenes/TutorialDeviation2.unity
+    guid: 705f4dde8734c3e4b9975d521f4e8d33
+  - enabled: 1
+    path: Assets/_project/Scenes/TutorialDeviationBoth.unity
+    guid: 12b6a9b4cdb9d8c43bea38de7bf44ade
+  - enabled: 1
     path: Assets/_project/Scenes/Combat.unity
     guid: 920d9051fa5c5ff4ca9e2bcd5772031b
+  - enabled: 1
+    path: Assets/_project/Scenes/ResultsScreen.unity
+    guid: 25d91b275f0f0c740906327149ad8c5f
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: ee25788909875094d8b58402ccd92382,
       type: 2}

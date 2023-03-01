@@ -16,7 +16,7 @@ MonoBehaviour:
   health: 120
   physicalAttack: 30
   magicalAttack: 0
-  physicalDefense: 30
+  physicalDefense: 10
   magicalDefense: 5
   desire: 5
   deck:

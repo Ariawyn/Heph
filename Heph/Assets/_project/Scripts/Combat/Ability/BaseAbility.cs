@@ -1,8 +1,6 @@
 using System;
-using Heph.Scripts.Character;
 using Heph.Scripts.Combat.Card;
 using UnityEngine;
-using UnityEngine.WSA;
 
 namespace Heph.Scripts.Combat.Ability
 {

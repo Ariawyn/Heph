@@ -16,7 +16,7 @@ MonoBehaviour:
   health: 120
   physicalAttack: 30
   magicalAttack: 0
-  physicalDefense: 30
+  physicalDefense: 10
   magicalDefense: 5
   desire: 5
   deck:
@@ -26,3 +26,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b91286376eb65564db258dfbfe2db8ae, type: 2}
   - {fileID: 11400000, guid: abd31cef73c66e64da1ee736b0772372, type: 2}
   - {fileID: 11400000, guid: abd31cef73c66e64da1ee736b0772372, type: 2}
+  flirtDeck: []

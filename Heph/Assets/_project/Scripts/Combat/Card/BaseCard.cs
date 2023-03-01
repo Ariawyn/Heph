@@ -1,11 +1,9 @@
 using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using Heph.Scripts.Character;
 using UnityEngine;
 
 using Heph.Scripts.Combat.Ability;
-using UnityEngine.WSA;
 
 namespace Heph.Scripts.Combat.Card
 {

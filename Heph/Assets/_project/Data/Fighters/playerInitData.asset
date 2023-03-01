@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: player
   health: 100
-  physicalAttack: 10
+  physicalAttack: 30
   magicalAttack: 10
   physicalDefense: 10
   magicalDefense: 10
